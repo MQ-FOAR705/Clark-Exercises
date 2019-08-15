@@ -1,6 +1,7 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 \usepackage{titling}
+\usepackage{setspace}
 
 \newcommand{\subtitle}[1]{%
   \posttitle{%
@@ -8,6 +9,8 @@
     \begin{center}\large#1\end{center}
     \vskip0.5em}%
 }
+
+\onehalfspacing
 
 \title{Learning Journal}
 \subtitle{FOAR705 2019}
@@ -20,9 +23,9 @@
 \newpage
 \begin{center}
 \section*{Week 1 Assignment}
-\date{7 August 2019}
+7 August 2019
 \end{center}
-
+\noindent
 \textbf{Objective:} To attempt to download and restore a backup from 6 months or older\\
 \textbf{Action:}
 \begin{enumerate}
@@ -40,9 +43,9 @@
 \newpage
 \begin{center}
 \section*{Week 2 Assignment}
-\date{14 August 2019}
+14 August 2019
 \end{center}
-
+\noindent
 \textbf{Objective:} To work through the first exercise in \textit{01: Format Data} by using examples from \textit{02: Common Mistakes}.
 \newline
 \textbf{Action:}
@@ -159,13 +162,11 @@
         \item I could not find any issue with this data set other than the conversion of special characters under 'content' as it was scrapped off the web. I do like how it has categorised dates as having a column for each variable of the date (One for day, one for month, one for year).
     \end{itemize}
 \end{itemize}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% New Entry %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \newpage
 \begin{center}
 \section*{LaTeX in Overleaf}
-\date{14 August 2019}
+14 August 2019
 \end{center}
 \textbf{Objective:} To document my first use of Overleaf, including useful commands to remember later, and errors that were encountered
 \newline
@@ -230,7 +231,67 @@
     \item Be able to use the \& and \_ symbols without dropping errors or disappearing
     \item Use the verbatim command to document new commands in full text.
 \end{enumerate}
-
-
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% New Entry %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{center}
+\section*{Scoping Exercise \& Overleaf sync with GitHub}
+15 August 2019
+\end{center}
+\textbf{Objective:}
+\begin{enumerate}
+    \item To document the use of TeX when completing the scoping exercise within Overleaf
+    \item To document committing Overleaf .tex files to GitHub through Overleaf's \textit{sync} function for version control
+\end{enumerate}
+\textbf{Action:}
+\begin{enumerate}
+    \item Using TeX in Overleaf
+    \begin{itemize}
+        \item Create a blank project in Overleaf
+        \item Use previous knowledge to complete scoping exercise, document new commands and any new errors
+    \end{itemize}
+    \item Committing an Overleaf document to GitHub
+    \begin{itemize}
+        \item Select \textit{Menu -> Sync -> GitHub}
+        \item Sign it to GitHub
+        \item Create a new repository for the scoping exercise titled \textit{clarkProofOfConcept}
+        \item Click "Push Overleaf changes to GitHub
+        \item Repeat for the Learning Journal
+    \end{itemize}
+\end{enumerate}
+\textbf{Errors:}
+\begin{enumerate}
+    \item Using Tex in Overleaf:
+    \begin{itemize}
+        \item No new errors occurred. 
+        \begin{itemize}
+            \item Only 2 overfull \verb|\hbox| warning occurred, which was easily corrected with a double slash.
+            \item Had to watch the use of \& and \% signs, as I failed to push a slash before the symbol multiple times.
+        \end{itemize}
+    \end{itemize}
+    \item Committing an Overleaf document to GitHub
+    \begin{itemize}
+        \item No errors occurred when syncing the scoping exercise to a new repository.
+        \item I was unable to sync my learning journal to an existing repository, so I deleted the existing repository and re-created it in the sync process. The only solution I could find was through git bash, but my previous knowledge of git has failed me, and thus will look into it next time this issue occurs.
+    \end{itemize}
+\end{enumerate}
+\textbf{Analysis:} New TeX commands that were found and used include:
+    \begin{itemize}
+        \item Useful packages:
+        \begin{itemize}
+            \item \verb|\usepackage{titling}|: Useful for creating subtitles
+            \item \verb|\usepackage{setspace}|: Used for setting line spacing to normal, 1.5, or double spacing
+        \end{itemize}
+        \item New Commands:
+        \begin{itemize}
+            \item \verb|\onehalfspacing|: Set the line spacing to 1.5
+            \item \verb|\verb|: Typing out a single command without using a verbatim block
+            \item \texttt{Ctrl + B; Ctrl + I; Ctrl + U}: Shortcuts for \verb|\textbf{}| etc.
+            \item \verb|texttt{}|: Typewriter font
+        \end{itemize}
+    \end{itemize}
+\textbf{Results:}
+\begin{enumerate}
+    \item Successfully synchronised both the Learning Journal and Proof of Concept to GitHub
+    \item Learned and documented new TeX packages and commands for future me.
+\end{enumerate}
 \end{document}
