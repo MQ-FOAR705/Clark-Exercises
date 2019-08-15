@@ -1,0 +1,227 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Learning Journal}
+\author{Matthew Clark}
+\date{\vspace{-5ex}} %Used to remove date when using \maketitle%
+
+\begin{document}
+\maketitle
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% New Entry %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{center}
+\section*{Week 1 Assignment}
+\date{7 August 2019}
+\end{center}
+
+\textbf{Objective:} To attempt to download and restore a backup from 6 months or older\\
+\textbf{Action:}
+\begin{enumerate}
+    \item Identify what file I want to back up
+    \begin{itemize}
+        \item I will be attempting to restore an old Ableton Live project from 4 years ago from my Google Drive
+    \end{itemize}
+    \item Open Google Drive, locate the file
+    \item Download the file
+    \item Open the file in Ableton and see how it works
+\end{enumerate}
+\textbf{Errors:} No errors were encountered. \\
+\textbf{Results:} I was able to successfully download and open a file from 4 years ago. However, it does highlight that my current backup system (Google Drive) will synchronize the most recent item version and replace an older version, meaning I have a backup, but I have no version control within my backup. This will be a point of action for future me to explore down the line.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% New Entry %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{center}
+\section*{Week 2 Assignment}
+\date{14 August 2019}
+\end{center}
+
+\textbf{Objective:} To work through the first exercise in \textit{01: Format Data} by using examples from \textit{02: Common Mistakes}.
+\newline
+\textbf{Action:}
+\begin{enumerate}
+    \item Download the messy data
+    \item Open up the data in a spreadsheet program
+    \item Analyze what is wrong with the spreadsheet and discuss ways to clean up the the two tabs in order to put them into one spreadsheet
+\end{enumerate}
+\textbf{Analysis:}
+\begin{itemize}
+    \item Using multiple data tables within 1 spreadsheet
+    \begin{itemize}
+        \item Both tabs contain multiple tables. The issue with this is that the computer can correlate columns and rows from different tables to mean the same thing, and if they contain the wrong data, this will end up with a miscorrelation or an error.
+        \item \textbf{To solve:} Have all corresponding data written out such that there are no tables and create extra columns for different variables
+    \end{itemize}
+    \item Using multiple tabs per spreadsheet
+    \begin{itemize}
+        \item This can cause issues with particular types of data analysis software, and is preferred to avoid this
+        \item \textbf{To Solve:} Place all data in one spreadsheet with extra columns for different variable types which correspond to the different countries used.
+    \end{itemize}
+    \item Putting more than one type of variable per column
+    \begin{itemize}
+        \item Both tabs have columns which use different data types or variables per column. In the \textit{Mozambique} tab, the livestock count contain the number of livestock, and what type, with no correlation between what the number means in relation to it. There is also a comment in the Water table which states (only in summer), which will confuse analysis software. In the \textit{Tanzania} tab, the livestock table contains columns with both numerical values and boolean values, which causes both confusion for the human reading and the computer analysing the data
+        \item \textbf{To Solve:} Create new columns such that each column corresponds to only 1 variable. As for the \textit{Tanzania} data, create 2 columns, one for \textit{animalsObversed} and use a boolean, and a \textit{numOfAnimals} used if the animals were counted, left blank if the data is missing/incomplete as a NULL value.
+    \end{itemize}
+    \item Zeros and Nulls
+    \begin{itemize}
+        \item Zeros should be used when there is a 0 observation result, and a NULL should be used when there is missing or incomplete data, and the 2 should not be mixed up. The best representation of NULL is a blank space, as other forms, such as negative numbers, can be misinterpreted as a negative value. The \textit{Mozambique} data contains both negative values, such as '-99' and '-999', while also using blanks and zeros. The \textit{Tanzania} data uses blanks, however due to the amount of blanks used, it is hard to gather whether or not the researcher intended them to be NULLS or zeros
+        \item \textbf{To Solve:} Replace negative values as blank spaces, and use zeros to correspond to zero observations. 
+    \end{itemize}
+    \item Variation in Spelling
+    \begin{itemize}
+        \item If a computer program is reading the data, it will distinguish a misspelling as a different type of data. For example, in the \textit{Mozambique} data, the researcher misspells 'earth' as 'errth' a couple of times.
+        \item \textbf{To Solve:} Clean up data so that all words are spelt correctly
+    \end{itemize}
+    \item Variations in variable recording
+    \begin{itemize}
+        \item If a computer program is reading the data, variations in the variable recording could create issues such as errors or different categorization of variables. Most notably is the \textit{Mozambique} 'plots' table, which uses both 'n' and 'no' to mean the same thing, while also using 'yes' and 'yes (only in summer)', which will cause confusion. There is also a number '1', which adds to the confusion.
+        \item \textbf{To Solve:} Make sure all variables are denoted the same way; if using a boolean, then do not use numbers as well. Use an extra column to denote if applicable to a particular season.
+    \end{itemize}
+    \item Using formatting to convey data
+    \begin{itemize}
+        \item A computer cannot read a coloured cell easily, and if a custom script is designed to accomodate for this, cross-compatibility will be compromised
+        \item \textbf{To Solve:} Use a new column to denote a sub-variable instead of a colour to denote a comment
+    \end{itemize}
+    \item Merging Cells
+    \begin{itemize}
+        \item The headings used for the tables are located in merged cells. This can cause issues for data analysis software.
+        \item \textbf{To Solve:} Do not use merged cells. Rather, create another column which denotes what you are looking at (Eg: typeOfObservation - plot, water, livestock, floorType etc)
+    \end{itemize}
+    \item Spaces used
+    \begin{itemize}
+        \item Spaces can cause issues with some programs. It is better to use camelCase of underscores to avoid this issue.
+        \item \textbf{To Solve:} Change all cells with spaces between words with camelCase or underscores (eg: floorType, wallType etc)
+    \end{itemize}
+    \item Special Characters
+    \begin{itemize}
+        \item Special characters such as parenthesis or asterisks may have a \\
+        special meaning in particular programs, causing an unintended input/output. Best to avoid these
+        \item \textbf{To Solve:} Treat comments in parenthesis or asterisks as variables and add them into new, different columns.
+    \end{itemize}
+\end{itemize}
+\textbf{Errors:} No errors were involved when downloading or opening the files, or exploring the Data Carpentry website.
+\newline
+\textbf{Result:} Gained new knowledge about what not to do when recording data in a spreadsheet, and ways to clean up existing data.
+\vspace{5mm}
+\newline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% New Sub-Entry %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textbf{Objective:} To analyse the Clean spreadsheet and discuss useful types of Metadata to improve readability (from \textit{01: Formal Data}.)
+\newline
+\textbf{Action:}
+\begin{enumerate}
+    \item Download the clean data
+    \item Analyse and record different types of Metadata I would include for this spreadsheet
+\end{enumerate}
+\textbf{Analysis:}
+\begin{itemize}
+    \item Some of the keyID's are out of order, any reason to that?
+    \item Where abouts are the villages located?
+    \item What was the specific questions asked
+    \item What is meant by 'muddaub' and 'burntbricks'
+    \item Define what is meant by 'membAssoc', 'affectConflict' and 'livCount'
+    \item Define what time period 'noMeals' is \\ referring to (Per person, daily, weekly?)
+    \item Define what is meant by 'instanceID'
+\end{itemize}
+\textbf{Errors}: No errors encounted when download or opening the text file, or when analysing the data. The only warning when opening the .csv format is that possible data loss may occur when the workbook is saved in this format. I assume that because the .csv format does not account for formatting, unlike an excel format, that if the data is written out correctly, this is not an issue, however any incorrect formatting could result in a loss of data.
+\newline
+\textbf{Results:} In looking into this file, it is good to realise that your data will be read by other people, and having a Metadata text file to explain all the shorthands and the way you gathered your data is crucial for others to understand your data structure. 
+\vspace{5mm}
+\newline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% New Sub-Entry %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textbf{Objective:} To explore and analyse other datasets from my field for potential issues in their formatting. 
+\newline
+\textbf{Action:}
+\begin{enumerate}
+    \item Research potential datasets used in the analysis of modern electronic music
+    \item Download, unzip, and open the .csv files in excel
+    \item Look through the data set and analyse the fields for any potential issues
+\end{enumerate}
+\textbf{Errors:} There were no issues that occured when researching, downloading, unzipping, and opening these files. \\
+\textbf{Results:}
+\begin{itemize}
+    \item First data set is titled "DJ Mag Top 100 History Dataset" and was \\ retrieved from https://www.kaggle.com/koki25ando/dj-mag-top-100-\\history-dataset
+    \begin{itemize}
+        \item  The data set was set up correctly. The only issue was the character ë found in Tiësto's name, and because it is a special character with an umlaut, it gets converted to TiÃ<sto, which also has special characters, and may cause further issues for extra programs
+        \item \textbf{To Solve:} Anglicize the name to be Tiesto to avoid any reading issues, and make a note in the Metadata.
+    \end{itemize}
+    \item Second data set is titled "FMA: A dataset for musical analysis" and was retrieved from https://github.com/mdeff/fma
+    \begin{itemize}
+        \item Overall, the data set was all laid out correctly. I did spot a question mark in box AJ164 instead of having a blank.
+    \end{itemize}
+    \item Last data set is titled "Pitchfork's reviews(aka musical's genres battle)" and was retrieved from \\https://www.kaggle.com/bcyphers/pitchfork-reviews/
+    \begin{itemize}
+        \item I could not find any issue with this data set other than the conversion of special characters under 'content' as it was scrapped off the web. I do like how it has categorised dates as having a column for each variable of the date (One for day, one for month, one for year).
+    \end{itemize}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% New Entry %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\begin{center}
+\section*{LaTeX in Overleaf}
+\date{14 August 2019}
+\end{center}
+\textbf{Objective:} To document my first use of Overleaf, including useful commands to remember later, and errors that were encountered
+\newline
+\textbf{Action:} Commands that were used so far for future me to remember include:
+\begin{itemize}
+    \item center: Centre Text
+    \item section*: New, unnumbered section
+    \item date: Write the specified date
+    \item textbf: Bold
+    \item textit: Italics
+    \item newline: Tells LaTeX to start a new line. Use this with caution.
+    \item enumeration: Ordered List. Can be nested.
+    \item itemize: Unordered List. Can be nested.
+    \item vspace: Creates a vertical space. Useful for formatting. Use mm.
+    \item Percentage sign: Comment in code.
+    \item newpage: Puts the next text onto a new page
+\end{itemize}
+\textbf{Errors:} I encountered a few errors so far in using Overleaf:
+\begin{itemize}
+    \item Formatting code manually (Adding in extra tabs)
+    \begin{itemize}
+        \item While this didn't break compilation, it did pop up and ask why this was done?
+        \item \textbf{Solved by:} Removing any extra tabs in the coding. Error went away
+    \end{itemize}
+    \item Used the Ampersand symbol in text instead of the word 'and'
+    \begin{itemize}
+        \item The ampersand symbol did not display as text. The symbol is used as a function in the itemize environment.
+        \item \textbf{Solved by:} Replacing it with the word 'and'. You can also use a backslash before the ampersand symbol to avoid it disappearing or causing an error.
+    \end{itemize}
+    \item Using an underscore
+    \begin{itemize}
+        \item The underscore cannot be used unless in Math mode.
+        \item \textbf{Solved by:} When noting examples, \\ I used camelCase instead. Learned that you can use a backslash before the underscore to use it as plain text.
+    \end{itemize}
+    \item Overfull hbox
+    \begin{itemize}
+        \item Found this to occur periodically. According to overleaf, "Overfull hbox messages tell you that some line sticks out over the right margin".
+        \item \textbf{Solved by:} There were various manual ways of adjusting hboxes. My quick fix was to use a double backslash as a line break to manual divide the line such that overleaf could not complain that it couldn't fit the entire line in. Will see in future if this quick fix over time breaks the system.
+    \end{itemize}
+    \item Underfull hbox
+    \begin{itemize}
+        \item Found that when I incorrectly used the newline function, it would spit out this error. Overleaf states "Underfull hbox messages tell you that some line is poorly typeset (or that you've improperly used newline to leave a vertical space (for example, typing two newline in a row);"
+        \item \textbf{Solved by:} checking where I have incorrectly used a double backslash or newline. Error went away
+    \end{itemize}
+    \item Being able to type in a command as plain text and have it not execute
+        \begin{itemize}
+            \item If i wanted to type in a command for the previous dot points, it would execute instead of staying as plain text
+            \item \textbf{Solved by:} Found out about the 'verbatim' command. Will utilize next time.
+        \end{itemize}
+    \item Having vspace and newline commands not interact properly, causing the line after to space out
+        \begin{itemize}
+            \item \textbf{To Solve:} Follow this ordering (vspace first):
+            \begin{verbatim}
+                \vspace{5mm}
+                \newline
+            \end{verbatim}
+        \end{itemize}
+\end{itemize}
+\textbf{Results:} Was able to research about errors and ways of formatting LaTeX so that:
+\begin{enumerate}
+    \item Next time, I can solve errors that I have so far encountered quickly without having to research them
+    \item Be able to use the \& and \_ symbols without dropping errors or disappearing
+    \item Use the verbatim command to document new commands in full text.
+\end{enumerate}
+
+
+
+\end{document}
