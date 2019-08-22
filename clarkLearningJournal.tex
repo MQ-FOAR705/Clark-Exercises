@@ -310,7 +310,7 @@ Week 4
     \item Download and open SAFI\_dates.xlsx
     \item Create 3 new columns: day; month; year
     \item Change the formatting of these columns from \textit{dates} to \textit{number}
-    \item Use Excel's in-built functions to extract each variable\\ (\=DAY(); \=MONTH(); \=YEAR();)
+    \item Use Excel's in-built functions to extract each variable\\ (\verb|=DAY(); =MONTH(); =YEAR();|)
     \item Add the date \textit{17/11} to the end of \textit{interview\_date} and analyse the results
 \end{enumerate}
 \textbf{Analysis}
@@ -322,7 +322,7 @@ Week 4
 \begin{itemize}
     \item I used the Excel functions before formatting the cell's data type to \textit{number}, and what it would do was display a date with the correct variable I was converting, and setting the rest of the variables to the default.
     \begin{itemize}
-        \item Example: \verb|=|(DAY(17/11/2016) turns into:\\ \textit{17/01/1900}
+        \item Example: \verb|=DAY(17/11/2016)| turns into:\\ \textit{17/01/1900}
     \end{itemize}
     After realizing what I had done and changed the format to \textit{number}, it was good to know how it functioned.
 \end{itemize}
@@ -372,5 +372,25 @@ Week 4
 \textbf{Analysis:} When opening the document in Notepad++, its easy to observe how a \verb|.csv| functions, and even without special parsing software, you can still understand the general gist of the data presented before you. Its universality means long-time backwards compatibility and minimises potential data loss or data corruption.\\
 \textbf{Errors:} No errors were encountered.\\
 \textbf{Results:} Was able to export a file as a .csv, and was able to open it in Notepad++.
-
+%%%%%%%%%%%%%%
+\newpage
+%%%%%%%%%%%%%%
+\begin{center}
+\section*{Further Analysis of Overleaf}
+22 August 2019
+\end{center}
+\textbf{Objective:} To document further errors encountered when working in Overleaf/LaTeX. \\
+\textbf{Errors:} 3 added errors I have encountered thus far include:
+\begin{itemize}
+    \item The \verb|=| disappears when used as text; \verb|\=| doesn't help.
+    \item The use of \verb|_| throws an error (Can only be used in MATH\_MODE; \verb|\_| seems to resolve this error
+    \item There was a section where I accidentally used \verb|\(|, which threw an error about MATH\_MODE; removing it fixed the issue.
+\end{itemize}
+\textbf{Analysis:}
+\begin{itemize}
+    \item \verb|=| is a function used in MATH\_MODE;
+    \item \verb|_| is a function used in MATH\_MODE;
+    \item After some research, you can initialize MATH\_MODE by using the \verb|\( \)| braces.
+\end{itemize}
+\textbf{Results:} Discovered some more about LaTeX's MATH\_MODE, and have \\started using \verb|\verb| more to overcome errors when using special characters as text.
 \end{document}
