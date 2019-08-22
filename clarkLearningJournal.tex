@@ -294,4 +294,83 @@
     \item Successfully synchronised both the Learning Journal and Proof of Concept to GitHub
     \item Learned and documented new TeX packages and commands for future me.
 \end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% New Entry %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{center}
+\section*{Data Carpentry Exercise 3: Dates as Data}
+Week 4
+\end{center}
+\textbf{Objective:}
+\begin{enumerate}
+    \item To convert a dd/mm/yyyy column into 3 columns for each date variable
+    \item To add a new date entry and analyse the result of the year column
+\end{enumerate}
+\textbf{Action:}
+\begin{enumerate}
+    \item Download and open SAFI\_dates.xlsx
+    \item Create 3 new columns: day; month; year
+    \item Change the formatting of these columns from \textit{dates} to \textit{number}
+    \item Use Excel's in-built functions to extract each variable\\ (\=DAY(); \=MONTH(); \=YEAR();)
+    \item Add the date \textit{17/11} to the end of \textit{interview\_date} and analyse the results
+\end{enumerate}
+\textbf{Analysis}
+\begin{itemize}
+    \item Was relatively simple to convert \textit{interview\_date} to its new columns
+    \item When I entered the new date without a year, it automatically changed it to the current year (\textit{2019}), which could be an issue if the researcher forgot to enter the year.
+\end{itemize}
+\textbf{Errors:}
+\begin{itemize}
+    \item I used the Excel functions before formatting the cell's data type to \textit{number}, and what it would do was display a date with the correct variable I was converting, and setting the rest of the variables to the default.
+    \begin{itemize}
+        \item Example: \verb|=|(DAY(17/11/2016) turns into:\\ \textit{17/01/1900}
+    \end{itemize}
+    After realizing what I had done and changed the format to \textit{number}, it was good to know how it functioned.
+\end{itemize}
+\textbf{Result:}
+\begin{itemize}
+    \item Was able to create 3 new columns per date variable, and analyse a date input with no year attached to it.
+\end{itemize}
+%%%%%%%%%%%%%%
+\newpage
+%%%%%%%%%%%%%%
+\begin{center}
+\section*{Data Carpentry Exercise 4: Quality Assurance}
+Week 4
+\end{center}
+\textbf{Objective:} To utilize Excel's ability to restrict the input of a certain cell to a particular form of data or data range \\
+\textbf{Action:}
+\begin{enumerate}
+    \item Download and open a fresh \verb|SAFI_clean.csv| file
+    \item Select an applicable column to restrict its input range, and use Excel's \verb|Data Validation| tool to execute it.
+    \item Select an applicable column to restrict its input set to a list, and use Excel's \verb|Data Validation| tool to execute it.
+\end{enumerate}
+Excel's \verb|Data Validation| is located: \begin{center}
+\verb|Data > Data Tools > Data Validation|
+\end{center}
+\textbf{Errors:}
+No errors occurred during this exercise.\\
+\textbf{Result:}
+\begin{itemize}
+    \item I was able to set up a range restriction on \verb|years_lived| to \\\verb|between 0 - 123| alongside an error message and tested it out, which worked as expected.
+    \item I was able to set up a list restriction on \verb|memb_assoc| to \verb|yes, no, NULL| alongside an error message and tested it out, which worked as expected
+\end{itemize}
+%%%%%%%%%%%%%%
+\newpage
+%%%%%%%%%%%%%%
+\begin{center}
+\section*{Data Carpentry Exercise 5: Quality Assurance}
+Week 4
+\end{center}
+\textbf{Objective:} To save a file in Excel as a \verb|.csv|.\\
+\textbf{Action:}
+\begin{enumerate}
+    \item In excel, go to \verb|File > Save As|
+    \item Under \verb|Format|, select \verb|Comma Separated Values|.
+    \item Hit Save
+    \item Open up the file in Notepad++ and observe the result
+\end{enumerate}
+\textbf{Analysis:} When opening the document in Notepad++, its easy to observe how a \verb|.csv| functions, and even without special parsing software, you can still understand the general gist of the data presented before you. Its universality means long-time backwards compatibility and minimises potential data loss or data corruption.\\
+\textbf{Errors:} No errors were encountered.\\
+\textbf{Results:} Was able to export a file as a .csv, and was able to open it in Notepad++.
+
 \end{document}
