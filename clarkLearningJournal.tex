@@ -10,7 +10,6 @@
     \begin{center}\large#1\end{center}
     \vskip0.5em}%
 }
-
 \onehalfspacing
 
 \title{Learning Journal}
@@ -30,7 +29,7 @@
 \newpage
 \begin{center}
 \section{Week 1 Assignment}
-7 August 2019
+Week 1
 \end{center}
 \noindent
 \textbf{Objective:} To attempt to download and restore a backup from 6 months or older\\
@@ -49,8 +48,8 @@
 %%%%%%%%%% New Entry %%%%%%%%%%
 \newpage
 \begin{center}
-\section{Week 2 Assignment}
-14 August 2019
+\section{Data Carpentry Exercise 1: Formal Data}
+Week 2
 \end{center}
 \noindent
 \textbf{Objective:} To work through the first exercise in \textit{01: Format Data} by using examples from \textit{02: Common Mistakes}.
@@ -119,8 +118,13 @@
 \newline
 \textbf{Result:} Gained new knowledge about what not to do when recording data in a spreadsheet, and ways to clean up existing data.
 \vspace{5mm}
-\newline
-%%%%%%%%%% New Sub-Entry %%%%%%%%%%
+%%%%%%%%%% New Entry %%%%%%%%%%
+\newpage
+\begin{center}
+\section{Data Carpentry Exercise 2: Common Mistakes}
+Week 2
+\subsection{Metadata}
+\end{center}
 \textbf{Objective:} To analyse the Clean spreadsheet and discuss useful types of Metadata to improve readability (from \textit{01: Formal Data}.)
 \newline
 \textbf{Action:}
@@ -144,6 +148,7 @@
 \vspace{5mm}
 \newline
 %%%%%%%%%% New Sub-Entry %%%%%%%%%%
+\subsection{Other data from similar fields}
 \textbf{Objective:} To explore and analyse other datasets from my field for potential issues in their formatting. 
 \newline
 \textbf{Action:}
@@ -403,11 +408,94 @@ Week 4
 \maketitle
 %%%%%%%%%% New Entry %%%%%%%%%%
 \newpage
-\section*{Unix Shell Exercise: Navigating Files \& Directories}
-\textbf{Objective:}
-
-
-
-
-
+\section{Unix Shell Exercise 1: Setup \& Introduction}
+\textbf{Objective:} To read through and understand the setup and introduction to the Unix Shell\\
+\textbf{Action:}
+\begin{enumerate}
+    \item Open Bash in Ubuntu for Windows, as it was already installed on my computer from my undergraduate degree
+    \item Test out the \verb|$ls| command
+\end{enumerate}
+\textbf{Errors:} No errors were encountered\\
+\textbf{Result:} Successfully opened Bash \& tested out the first command
+%%%%%%%%%% New Entry %%%%%%%%%%
+\newpage
+\section{Unix Shell Exercise 2: Navigation}
+\textbf{Objective:} To run through the following exercises:
+\begin{enumerate}
+    \item Exploring More \verb|ls| Flags
+    \item Listing Recursively and By Time
+    \item Absolute vs. Relative Path 
+    \item Relative Path Resolution
+    \item \verb|ls| Reading Comprehension
+\end{enumerate}
+\textbf{Action:}
+\begin{enumerate}
+    \item Exploring More \verb|ls| Flags: Test out the following flags:
+    \begin{enumerate}
+        \item \verb|ls -l|
+        \item \verb|ls -l -h|
+    \end{enumerate}
+    \item Listing Recursively and By Time: Test out the following flags:
+    \begin{enumerate}
+        \item \verb|ls -R|: List recursively
+        \item \verb|ls -t|: List by time last changed
+        \item \verb|ls -R -t|: Test out what order this is sorted in
+    \end{enumerate}
+    \item Starting from /Users/amanda/data, which of the following commands could Amanda use to navigate to her hoe directory?
+    \item Given the filesystem diagram, if \verb|pwd| displays \verb|/Users/thing|, what will \verb|ls -F ../backup| display?
+    \item If \verb|pwd| displays \verb|/Users/Backup|, what command will result in the output \verb|pnas_sub/ pnas_final/ original/|?
+\end{enumerate}
+\textbf{Errors:}
+\begin{enumerate}
+    \item Mistook \verb|-l| for \verb|-1| and didn't display what I wanted. Realised and changed the flag. Worked after that.
+    \item No errors were encountered.
+    \item Was able to navigate my directory around using shell commands without any errors.
+    \item Not Applicable
+    \item Not Applicable
+\end{enumerate}
+\textbf{Analysis:}
+\begin{enumerate}
+    \item When comparing \verb|ls|; \verb|ls -l| \& \verb|ls -l -h|, 
+    \begin{enumerate}
+        \item \verb|ls -l| displayed the following: \\
+        \verb|-rwxrwxrwx 1 root root    13076 Jan 17  2019|
+        \item \verb|ls -l -h| displayed the following: \\
+        \verb|-rwxrwxrwx 1 root root  13K Jan 17  2019|
+    \end{enumerate}
+        By the looks of things, it will display the file size and the date last modified. \verb|-h|, according to \textit{Solutions}, stands for \textbf{H}uman Readable, and converts the file size to a more readable format.\\
+        It also states the file type \& the links back to the root directory.
+    \item: When comparing \verb|ls -R|; \verb|ls -l -t|; \verb|ls -l -R -t|:
+    \begin{enumerate}
+        \item \verb|ls -R| went through every single file in every single sub-directory in about 10 seconds
+        \item \verb|ls -l -t| listed the files/folders in my directory by time last changed, and when used in conjunction with \verb|-l|, I could see the result
+        \item \verb|ls -l -R -t|: Listed every single file in every sub-directory by time last changed, presented in long form
+    \end{enumerate}
+    \item Amanda can use the following:
+    \begin{enumerate}
+        \item \verb|cd ~|: \verb|~| stands for the home directory, so \verb|cd ~| navigates to the home directory.
+        \item \verb|cd ~/data/..|: Would navigate to home, down to data, then back up to home. Over-complicated, but it works.
+        \item \verb|cd|: Shortcut to go back home
+        \item \verb|cd ..|: Moves back up one level, which is home.
+    \end{enumerate}
+    \item \verb|ls -F| lists files with their file type; \verb|..| brings the directory up a level; \verb|/backup| navigates the directory down a level to the folder \verb|backup|. Hence, it would display:\\
+    \verb|original/ pnas_final/ pnas_sub/|
+    \item Because \verb|-r| will list the folders backwards, which is what the given list is listed as, and \verb|-F| will display the file type, which are folders, the correct command would be \verb|ls -r -F|. \verb|ls -r -F /Users/backup| would also work, but is unnecessary as we are already in backup.
+\end{enumerate}
+\textbf{Results:}
+\begin{enumerate}
+    \item Was able to test out \verb|ls -l| \& \verb|ls -l -h|.
+    \item Was able to test out \verb|ls -R| \& \verb|ls -t|;
+    \item Was able to analyse and be able to move directory around using path commands.
+    \item Was able to correctly identify the result of the command \verb|ls -F ../backup|
+    \item Was able to correctly identify and analyse the correct command.
+\end{enumerate}
+%%%%%%%%%% New Entry %%%%%%%%%%
+\newpage
+\section{Unix Shell Exercise 3: Files and Directories}
+\subsection{Task 1}
+\textbf{Objective:}\\
+\textbf{Action:}\\
+\textbf{Errors:}\\
+\textbf{Analysis:}\\
+\textbf{Results:}
 \end{document}
