@@ -2,6 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{titling}
 \usepackage{setspace}
+\setcounter{secnumdepth}{0} %Table of contents without numbers
 
 \newcommand{\subtitle}[1]{%
   \posttitle{%
@@ -16,13 +17,19 @@
 \subtitle{FOAR705 2019}
 \author{Matthew Clark}
 \date{\vspace{-5ex}} %Used to remove date when using \maketitle%
-
+%%%%%%%%%% Title Page & Contents %%%%%%%%%%
 \begin{document}
 \maketitle
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% New Entry %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\tableofcontents
+%%%%%%%%%% New Title %%%%%%%%%%
+\newpage
+\title{Data Carpentry Journal + Overleaf notes}
+\maketitle
+%%%%%%%%%% New Entry %%%%%%%%%%
 \newpage
 \begin{center}
-\section*{Week 1 Assignment}
+\section{Week 1 Assignment}
 7 August 2019
 \end{center}
 \noindent
@@ -39,10 +46,10 @@
 \end{enumerate}
 \textbf{Errors:} No errors were encountered. \\
 \textbf{Results:} I was able to successfully download and open a file from 4 years ago. However, it does highlight that my current backup system (Google Drive) will synchronize the most recent item version and replace an older version, meaning I have a backup, but I have no version control within my backup. This will be a point of action for future me to explore down the line.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% New Entry %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% New Entry %%%%%%%%%%
 \newpage
 \begin{center}
-\section*{Week 2 Assignment}
+\section{Week 2 Assignment}
 14 August 2019
 \end{center}
 \noindent
@@ -113,7 +120,7 @@
 \textbf{Result:} Gained new knowledge about what not to do when recording data in a spreadsheet, and ways to clean up existing data.
 \vspace{5mm}
 \newline
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% New Sub-Entry %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% New Sub-Entry %%%%%%%%%%
 \textbf{Objective:} To analyse the Clean spreadsheet and discuss useful types of Metadata to improve readability (from \textit{01: Formal Data}.)
 \newline
 \textbf{Action:}
@@ -136,7 +143,7 @@
 \textbf{Results:} In looking into this file, it is good to realise that your data will be read by other people, and having a Metadata text file to explain all the shorthands and the way you gathered your data is crucial for others to understand your data structure. 
 \vspace{5mm}
 \newline
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% New Sub-Entry %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% New Sub-Entry %%%%%%%%%%
 \textbf{Objective:} To explore and analyse other datasets from my field for potential issues in their formatting. 
 \newline
 \textbf{Action:}
@@ -162,10 +169,10 @@
         \item I could not find any issue with this data set other than the conversion of special characters under 'content' as it was scrapped off the web. I do like how it has categorised dates as having a column for each variable of the date (One for day, one for month, one for year).
     \end{itemize}
 \end{itemize}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% New Entry %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% New Entry %%%%%%%%%%
 \newpage
 \begin{center}
-\section*{LaTeX in Overleaf}
+\section{LaTeX in Overleaf}
 14 August 2019
 \end{center}
 \textbf{Objective:} To document my first use of Overleaf, including useful commands to remember later, and errors that were encountered
@@ -231,10 +238,10 @@
     \item Be able to use the \& and \_ symbols without dropping errors or disappearing
     \item Use the verbatim command to document new commands in full text.
 \end{enumerate}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% New Entry %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% New Entry %%%%%%%%%%
 \newpage
 \begin{center}
-\section*{Scoping Exercise \& Overleaf sync with GitHub}
+\section{Scoping Exercise \& Overleaf sync with GitHub}
 15 August 2019
 \end{center}
 \textbf{Objective:}
@@ -294,10 +301,10 @@
     \item Successfully synchronised both the Learning Journal and Proof of Concept to GitHub
     \item Learned and documented new TeX packages and commands for future me.
 \end{enumerate}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% New Entry %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% New Entry %%%%%%%%%%
 \newpage
 \begin{center}
-\section*{Data Carpentry Exercise 3: Dates as Data}
+\section{Data Carpentry Exercise 3: Dates as Data}
 Week 4
 \end{center}
 \textbf{Objective:}
@@ -330,11 +337,10 @@ Week 4
 \begin{itemize}
     \item Was able to create 3 new columns per date variable, and analyse a date input with no year attached to it.
 \end{itemize}
-%%%%%%%%%%%%%%
+%%%%%%%%%% New Entry %%%%%%%%%%
 \newpage
-%%%%%%%%%%%%%%
 \begin{center}
-\section*{Data Carpentry Exercise 4: Quality Assurance}
+\section{Data Carpentry Exercise 4: Quality Assurance}
 Week 4
 \end{center}
 \textbf{Objective:} To utilize Excel's ability to restrict the input of a certain cell to a particular form of data or data range \\
@@ -354,11 +360,10 @@ No errors occurred during this exercise.\\
     \item I was able to set up a range restriction on \verb|years_lived| to \\\verb|between 0 - 123| alongside an error message and tested it out, which worked as expected.
     \item I was able to set up a list restriction on \verb|memb_assoc| to \verb|yes, no, NULL| alongside an error message and tested it out, which worked as expected
 \end{itemize}
-%%%%%%%%%%%%%%
+%%%%%%%%%% New Entry %%%%%%%%%%
 \newpage
-%%%%%%%%%%%%%%
 \begin{center}
-\section*{Data Carpentry Exercise 5: Quality Assurance}
+\section{Data Carpentry Exercise 5: Exporting Data}
 Week 4
 \end{center}
 \textbf{Objective:} To save a file in Excel as a \verb|.csv|.\\
@@ -372,11 +377,10 @@ Week 4
 \textbf{Analysis:} When opening the document in Notepad++, its easy to observe how a \verb|.csv| functions, and even without special parsing software, you can still understand the general gist of the data presented before you. Its universality means long-time backwards compatibility and minimises potential data loss or data corruption.\\
 \textbf{Errors:} No errors were encountered.\\
 \textbf{Results:} Was able to export a file as a .csv, and was able to open it in Notepad++.
-%%%%%%%%%%%%%%
+%%%%%%%%%% New Entry %%%%%%%%%%
 \newpage
-%%%%%%%%%%%%%%
 \begin{center}
-\section*{Further Analysis of Overleaf}
+\section{Further Analysis of Overleaf}
 22 August 2019
 \end{center}
 \textbf{Objective:} To document further errors encountered when working in Overleaf/LaTeX. \\
@@ -393,4 +397,17 @@ Week 4
     \item After some research, you can initialize MATH\_MODE by using the \verb|\( \)| braces.
 \end{itemize}
 \textbf{Results:} Discovered some more about LaTeX's MATH\_MODE, and have \\started using \verb|\verb| more to overcome errors when using special characters as text.
+%%%%%%%%%% New Title %%%%%%%%%%
+\newpage
+\title{Unix Shell Exercises + Overleaf notes}
+\maketitle
+%%%%%%%%%% New Entry %%%%%%%%%%
+\newpage
+\section*{Unix Shell Exercise: Navigating Files \& Directories}
+\textbf{Objective:}
+
+
+
+
+
 \end{document}
