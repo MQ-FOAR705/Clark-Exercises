@@ -142,15 +142,12 @@ Week 2
     \item Define what time period 'noMeals' is \\ referring to (Per person, daily, weekly?)
     \item Define what is meant by 'instanceID'
 \end{itemize}
-\textbf{Errors}: No errors encounted when download or opening the text file, or when analysing the data. The only warning when opening the .csv format is that possible data loss may occur when the workbook is saved in this format. I assume that because the .csv format does not account for formatting, unlike an excel format, that if the data is written out correctly, this is not an issue, however any incorrect formatting could result in a loss of data.
-\newline
+\textbf{Errors}: No errors encounted when download or opening the text file, or when analysing the data. The only warning when opening the .csv format is that possible data loss may occur when the workbook is saved in this format. I assume that because the .csv format does not account for formatting, unlike an excel format, that if the data is written out correctly, this is not an issue, however any incorrect formatting could result in a loss of data.\\
 \textbf{Results:} In looking into this file, it is good to realise that your data will be read by other people, and having a Metadata text file to explain all the shorthands and the way you gathered your data is crucial for others to understand your data structure. 
-\vspace{5mm}
-\newline
+\newpage
 %%%%%%%%%% New Sub-Entry %%%%%%%%%%
 \subsection{Other data from similar fields}
-\textbf{Objective:} To explore and analyse other datasets from my field for potential issues in their formatting. 
-\newline
+\textbf{Objective:} To explore and analyse other datasets from my field for potential issues in their formatting\\
 \textbf{Action:}
 \begin{enumerate}
     \item Research potential datasets used in the analysis of modern electronic music
@@ -492,10 +489,166 @@ Week 4
 %%%%%%%%%% New Entry %%%%%%%%%%
 \newpage
 \section{Unix Shell Exercise 3: Files and Directories}
-\subsection{Task 1}
-\textbf{Objective:}\\
-\textbf{Action:}\\
-\textbf{Errors:}\\
-\textbf{Analysis:}\\
-\textbf{Results:}
+%
+\subsection{Task 1: Creating Files}
+%
+\textbf{Objective:} Test out the \verb|touch| command and create a blank text file. Analyse what happened, how big is the file, and why would you want to use \verb|touch|?
+\textbf{Action:}
+Executed the command \verb|touch my_file.txt|\\
+\textbf{Errors:} No errors were found\\
+\textbf{Analysis:} \verb|touch| creates a new file, in this case a text file, without opening the editor, unlike \verb|nano|. The file is 0 bytes in size. According to the \textit{solution}, this is helpful when programs require a blank file to already be generated so it can output data.\\
+\textbf{Results:} Successfully identified what the \verb|touch| command did. Had to use the \textit{Solution} to find out why.
+%
+\subsection{Task 2: Moving to the Current Folder}
+%
+\textbf{Objective:} Move 2 files from the current directory to another folder shared by the folder above.\\
+\textbf{Action:} Fill in the blanks:\\\verb|$ mv ___/sucrose.dat ___/maltose.dat|\\
+\textbf{Errors:} Not applicable\\
+\textbf{Analysis:} \verb|mv| will move the located file to the current directory. To locate the files, we must move up a level and then access the old folder \verb|analysed/|. Hence, we execute the command:\\
+\verb|mv ../analyzed/sucrose.dat ../analyzed/maltose.dat|.\\
+\textbf{Results:} Correctly identified the way to move a file from one folder to another folder using the shell.
+%
+\subsection{Task 3: Renaming Files}
+%
+\textbf{Objective:} To identify how to rename a file.\\
+\textbf{Action:} Analyse the 4 options and determine which is the correct command.\\
+\textbf{Errors:} Not applicable\\
+\textbf{Analysis:} To rename a file, we use the \verb|mv| command in the following way:\\\verb|mv statstics.txt statistics.txt|.\\
+\textbf{Results:} Correctly identified the right way to rename a file.
+%
+\subsection{Task 4: Moving and Copying}
+%
+\textbf{Objective:} To analyse the line-by-line code and identify the result\\
+\textbf{Action:} Analyse the code and pick a solution:\\ \verb|proteins-saved.dat recombine|
+\textbf{Errors:} The correct answer was \verb|recombine|.\\
+\textbf{Analysis:} I forgot that the \verb|..| meant move up a level from where the directory is, not where the file is located, and hence we copied the file above the current directory. Hence, the correct answer was \verb|recombine|.\\
+\textbf{Result:} Picked the wrong answer, and analysed the correct answer in \textit{solution}.
+%
+\subsection{Task 5: Using rm Safely}
+%
+\textbf{Objective:} To analyse what \verb|-i| does when using the remove command\\
+\textbf{Action:} Use the remove command to remove a file:\\\verb|rm -i thesis_backup/quotations.txt|\\
+\textbf{Errors:} No errors encountered\\
+\textbf{Analysis:} Using the \verb|-i| flag gives us a prompt before removing the file. The shell doesn't have a recycling bin like windows, and hence once a file is removed, it is gone forever (mostly).//
+\textbf{Result:} Identify the use of \verb|rm -i|
+%
+\subsection{Task 6: Copy with Multiple Filenames}
+%
+\textbf{Objective:} To identify the results when copying multiple files in the same \verb|cp| command\\
+\textbf{Action:}
+\begin{enumerate}
+    \item Explain what happens when the following command is executed:\\
+    \verb|$ cp amino-acids.txt animals.txt backup/|
+    \item Explain what happens when the following command is executed:\\
+    \verb|$ cp amino-acids.txt animals.txt morse.txt |
+\end{enumerate}
+\textbf{Errors:} No errors were encountered.
+\textbf{Analysis:}
+\begin{enumerate}
+    \item When there are multiple files in the same \verb|cp| command, the last argument is treated as the destination, and the files listed beforehand are copied there. In this case, \verb|amino-acids.txt| \& \texttt{animals.txt} copied to \verb|backup/|.
+    \item Because the last argument is treated as the destination, the command would throw an error stating that \texttt{morse.txt} is not a destination.
+\end{enumerate}
+\textbf{Result:} Learned about copying multiple files and the correct syntax needed to execute \texttt{cp} without throwing an error.
+%
+\subsection{Task 7: List filenames matching a pattern}
+%
+\textbf{Objective:} To identify the correct use of wildcards\\
+\textbf{Action:} Using the \texttt{molecules/} directory, what command produces the output \texttt{ethane.pdb methane.pdb}?\\
+\textbf{Errors:} No errors were encountered.
+\textbf{Analysis:} One has to remember that \verb|*| means \textit{zero or more characters}, where as \verb|?| is only a single character wildcard. However, I was able to identify that \verb|ls *t??ne.pdb| was the correct command.\\
+\textbf{Result:} Was able to analyse and pick the corrent command for the expected output.
+%
+\subsection{Task 7: More on wildcards}
+%
+\textbf{Objective:} To identify the correct use of wildcards for the intended output
+\textbf{Action:} Fill in the blanks to correctly output the intended output\\
+\textbf{Errors:} No errors were encountered.\\
+\textbf{Analysis:} \verb|$ cp *calibration.txt backup/calibration| would copy all calibration files to \verb|backup/calibration|.\\
+\verb|$ cp 2015-11-* send_to_bob/all_november_files/| would copy all files \\made in November to \verb|send_to_bob/all_november_files/|.\\
+\verb|$ cp *-*-23-dataset* send_to_bob/all_datasets_created_on_a_23rd/|\\ would copy all datastes made on the 23rd to \\\verb|send_to_bob/all_datasets_created_on_a_23rd/|. It could be simplified further to \verb|*-23-dataset*|\\
+\textbf{Result:} Was able to correctly identify the correct command for the intended output, however my third answer could be simplified further.
+%
+\subsection{Task 8: Organising Files and Directories}
+%
+\textbf{Objective:} To figure out the correct way to move multiple items into a \\subdirectory\\
+\textbf{Action:} If \verb|ls -F| resulted in the output:\\ \verb|analyzed/  fructose.dat    raw/   sucrose.dat|, identify the correct \\command to move the \verb|.dat| files into \verb|analyzed/|?\\
+\textbf{Errors:} No errors were encountered\\
+\textbf{Analysis:} Inferring from the previous tasks, I identified the following command would work:\\
+\verb|$ mv fructose.dat sucrose.dat analyzed/|\\
+However, this could be further simplified by using a wildcard:\\
+\verb|$ mv *.dat analyzed/|\\
+\textbf{Result:} Correctly moved 2 files into a subdirectory, however discovered\\ my command could've been simplified by using a wildcard.
+%
+\subsection{Task 9: Reproduce a folder structure}
+%
+\textbf{Objective:} To reproduce a folder layout using the \texttt{mkdir} command.\\
+\textbf{Action:} From 4 options, pick the correct command(s) which results in the following folder layout:
+\begin{verbatim}
+    2016-05-20/
+    |- data
+        |-- processed
+        |-- raw
+\end{verbatim}
+\textbf{Errors:} No errors were encountered\\
+\textbf{Analysis:} I correctly picked the 2 correct ways by creating the directory before creating the sub-directories and so forth. I was not sure about the syntax, but you can do the following:
+\begin{itemize}
+    \item \verb|mkdir 2016-05-20/data| to create the subdirectory \verb|data| if the level above was already created.
+    \item \verb|mkdir processed raw| will create 2 folders at the same time in the current directory.
+\end{itemize}
+\textbf{Results:} Correctly analysed how to create folder structures within the Unix shell.
+%%%%%%%%%% New Entry %%%%%%%%%%
+\newpage
+\section{Syntax \& Commands for the Unix Shell}
+\textbf{Objective:} To document helpful syntax and commands learned so far when using the Unix shell.\\
+\textbf{Action:}
+\begin{itemize}
+    \item Shell Syntax
+    \begin{itemize}
+        \item \verb|/|: Root or Directory
+        \item \verb|@|: Link
+        \item \verb|*|: Executable
+        \item \verb|~|: User's home directory
+    \end{itemize}
+    \item Shell Commands \& Flags
+    \begin{itemize}
+        \item \verb|pwd|: Present working directory
+        \item \verb|ls|: List sub-directories
+        \begin{itemize}
+            \item \verb|-a|: Show all files including hidden files
+            \item \verb|-F|: Show file type by adding a char to entry
+            \item \verb|-l|: Long format: Show extra information
+            \item \verb|-R|: List directory tree recursively
+            \item \verb|-s|: List by file size
+            \item \verb|-t|: List by time \& date
+        \end{itemize}
+        \item \verb|cd|: Command directory
+        \begin{itemize}
+            \item \verb|cd <folder>|: Used to move the working directory to that folder
+            \item \verb|cd ..|: Move up a level
+        \end{itemize}
+        \item \verb|mkdir|: Make a directory
+        \item \verb|touch|: Generate a new file.
+        \item \verb|nano|: Generate a new text file and open it in \textit{nano}
+        \item \verb|mv|: Move the located file to the current directory. Can also be used to overwrite/rename.
+        \begin{itemize}
+            \item \verb|-i|: Asks you for confirmation before moving.
+        \end{itemize}
+        \item \verb|cp|: Copy the located file to the current directory.
+        \begin{itemize}
+            \item \verb|-r| Used to copy a directory and all its contents recursively.
+        \end{itemize}
+        \item \verb|rm|: Remove the located file.
+        \begin{itemize}
+            \item \verb|-i|: Prompt the user before removing file.
+        \end{itemize}
+        \item \verb|*|: Zero or more character wildcard.
+        \begin{itemize}
+            \item \verb|?|: Single char wildcard. Can be used multiple times for multiple char's.
+        \end{itemize}
+    \end{itemize}
+    \item Keyboard Shortcuts
+    \begin{itemize}
+        \item \verb|Ctrl+L|: Clear the shell window
+    \end{itemize}
+\end{itemize}
 \end{document}
