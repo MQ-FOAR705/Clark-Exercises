@@ -3,6 +3,8 @@
 \usepackage{titling}
 \usepackage{setspace}
 \setcounter{secnumdepth}{0} %Table of contents without numbers
+\usepackage{graphicx}
+\graphicspath{ {./} }
 
 \newcommand{\subtitle}[1]{%
   \posttitle{%
@@ -10,7 +12,8 @@
     \begin{center}\large#1\end{center}
     \vskip0.5em}%
 }
-\onehalfspacing
+
+\doublespacing
 
 \title{Learning Journal}
 \subtitle{FOAR705 2019}
@@ -47,11 +50,8 @@ Week 1
 \textbf{Results:} I was able to successfully download and open a file from 4 years ago. However, it does highlight that my current backup system (Google Drive) will synchronize the most recent item version and replace an older version, meaning I have a backup, but I have no version control within my backup. This will be a point of action for future me to explore down the line.
 %%%%%%%%%% New Entry %%%%%%%%%%
 \newpage
-\begin{center}
-\section{Data Carpentry Exercise 1: Formal Data}
-Week 2
-\end{center}
-\noindent
+\section{Data carpentry Exercises 1 \& 2: Formatting Data}
+\subsection{Task 1: Analyzing Messy Data}
 \textbf{Objective:} To work through the first exercise in \textit{01: Format Data} by using examples from \textit{02: Common Mistakes}.
 \newline
 \textbf{Action:}
@@ -117,14 +117,9 @@ Week 2
 \textbf{Errors:} No errors were involved when downloading or opening the files, or exploring the Data Carpentry website.
 \newline
 \textbf{Result:} Gained new knowledge about what not to do when recording data in a spreadsheet, and ways to clean up existing data.
-\vspace{5mm}
-%%%%%%%%%% New Entry %%%%%%%%%%
-\newpage
-\begin{center}
-\section{Data Carpentry Exercise 2: Common Mistakes}
-Week 2
-\subsection{Metadata}
-\end{center}
+%
+\subsection{Task 2: Metadata}
+%
 \textbf{Objective:} To analyse the Clean spreadsheet and discuss useful types of Metadata to improve readability (from \textit{01: Formal Data}.)
 \newline
 \textbf{Action:}
@@ -146,7 +141,7 @@ Week 2
 \textbf{Results:} In looking into this file, it is good to realise that your data will be read by other people, and having a Metadata text file to explain all the shorthands and the way you gathered your data is crucial for others to understand your data structure. 
 \newpage
 %%%%%%%%%% New Sub-Entry %%%%%%%%%%
-\subsection{Other data from similar fields}
+\section{Analysing other data from similar fields}
 \textbf{Objective:} To explore and analyse other datasets from my field for potential issues in their formatting\\
 \textbf{Action:}
 \begin{enumerate}
@@ -173,10 +168,7 @@ Week 2
 \end{itemize}
 %%%%%%%%%% New Entry %%%%%%%%%%
 \newpage
-\begin{center}
 \section{LaTeX in Overleaf}
-14 August 2019
-\end{center}
 \textbf{Objective:} To document my first use of Overleaf, including useful commands to remember later, and errors that were encountered
 \newline
 \textbf{Action:} Commands that were used so far for future me to remember include:
@@ -234,55 +226,6 @@ Week 2
             \end{verbatim}
         \end{itemize}
 \end{itemize}
-\textbf{Results:} Was able to research about errors and ways of formatting LaTeX so that:
-\begin{enumerate}
-    \item Next time, I can solve errors that I have so far encountered quickly without having to research them
-    \item Be able to use the \& and \_ symbols without dropping errors or disappearing
-    \item Use the verbatim command to document new commands in full text.
-\end{enumerate}
-%%%%%%%%%% New Entry %%%%%%%%%%
-\newpage
-\begin{center}
-\section{Scoping Exercise \& Overleaf sync with GitHub}
-15 August 2019
-\end{center}
-\textbf{Objective:}
-\begin{enumerate}
-    \item To document the use of TeX when completing the scoping exercise within Overleaf
-    \item To document committing Overleaf .tex files to GitHub through Overleaf's \textit{sync} function for version control
-\end{enumerate}
-\textbf{Action:}
-\begin{enumerate}
-    \item Using TeX in Overleaf
-    \begin{itemize}
-        \item Create a blank project in Overleaf
-        \item Use previous knowledge to complete scoping exercise, document new commands and any new errors
-    \end{itemize}
-    \item Committing an Overleaf document to GitHub
-    \begin{itemize}
-        \item Select \textit{Menu -> Sync -> GitHub}
-        \item Sign it to GitHub
-        \item Create a new repository for the scoping exercise titled \textit{clarkProofOfConcept}
-        \item Click "Push Overleaf changes to GitHub
-        \item Repeat for the Learning Journal
-    \end{itemize}
-\end{enumerate}
-\textbf{Errors:}
-\begin{enumerate}
-    \item Using Tex in Overleaf:
-    \begin{itemize}
-        \item No new errors occurred. 
-        \begin{itemize}
-            \item Only 2 overfull \verb|\hbox| warning occurred, which was easily corrected with a double slash.
-            \item Had to watch the use of \& and \% signs, as I failed to push a slash before the symbol multiple times.
-        \end{itemize}
-    \end{itemize}
-    \item Committing an Overleaf document to GitHub
-    \begin{itemize}
-        \item No errors occurred when syncing the scoping exercise to a new repository.
-        \item I was unable to sync my learning journal to an existing repository, so I deleted the existing repository and re-created it in the sync process. The only solution I could find was through git bash, but my previous knowledge of git has failed me, and thus will look into it next time this issue occurs.
-    \end{itemize}
-\end{enumerate}
 \textbf{Analysis:} New TeX commands that were found and used include:
     \begin{itemize}
         \item Useful packages:
@@ -298,17 +241,15 @@ Week 2
             \item \verb|texttt{}|: Typewriter font
         \end{itemize}
     \end{itemize}
-\textbf{Results:}
+\textbf{Results:} Was able to research about errors and ways of formatting LaTeX so that:
 \begin{enumerate}
-    \item Successfully synchronised both the Learning Journal and Proof of Concept to GitHub
-    \item Learned and documented new TeX packages and commands for future me.
+    \item Next time, I can solve errors that I have so far encountered quickly without having to research them
+    \item Be able to use the \& and \_ symbols without dropping errors or disappearing
+    \item Use the verbatim command to document new commands in full text.
 \end{enumerate}
 %%%%%%%%%% New Entry %%%%%%%%%%
 \newpage
-\begin{center}
 \section{Data Carpentry Exercise 3: Dates as Data}
-Week 4
-\end{center}
 \textbf{Objective:}
 \begin{enumerate}
     \item To convert a dd/mm/yyyy column into 3 columns for each date variable
@@ -343,7 +284,6 @@ Week 4
 \newpage
 \begin{center}
 \section{Data Carpentry Exercise 4: Quality Assurance}
-Week 4
 \end{center}
 \textbf{Objective:} To utilize Excel's ability to restrict the input of a certain cell to a particular form of data or data range \\
 \textbf{Action:}
@@ -366,7 +306,6 @@ No errors occurred during this exercise.\\
 \newpage
 \begin{center}
 \section{Data Carpentry Exercise 5: Exporting Data}
-Week 4
 \end{center}
 \textbf{Objective:} To save a file in Excel as a \verb|.csv|.\\
 \textbf{Action:}
@@ -412,80 +351,95 @@ Week 4
     \item Open Bash in Ubuntu for Windows, as it was already installed on my computer from my undergraduate degree
     \item Test out the \verb|$ls| command
 \end{enumerate}
-\textbf{Errors:} No errors were encountered\\
+\textbf{Errors:} Unable to access my C:/ drive. Was able to move my current directory through \verb|cd /mnt/c|. From there, \texttt{ls} displayed my files in my C drive.\\
+\textbf{Analysis:} Luckily, I had already altered my computer to run Linux within windows so I had instant access to the shell.\\
 \textbf{Result:} Successfully opened Bash \& tested out the first command
 %%%%%%%%%% New Entry %%%%%%%%%%
 \newpage
-\section{Unix Shell Exercise 2: Navigation}
-\textbf{Objective:} To run through the following exercises:
+\section{Unix Shell Exercise 2: Navigating Files and Directories}
+%
+\subsection{Task 1: Exploring More ls Flags}
+%
+\textbf{Objective:} To test out and analyse the given flags for \texttt{ls}\\
+\textbf{Action:} Run the following commands:
+\begin{verbatim}
+    \item \verb|ls -l|
+    \item \verb|ls -l -h|
+\end{verbatim}
+\textbf{Errors:} Mistook \verb|-l| for \verb|-1| and didn't display what I wanted. Realised and changed the flag. Worked after that.\\
+\textbf{Analysis:} When comparing \verb|ls|; \verb|ls -l| \& \verb|ls -l -h|, 
 \begin{enumerate}
-    \item Exploring More \verb|ls| Flags
-    \item Listing Recursively and By Time
-    \item Absolute vs. Relative Path 
-    \item Relative Path Resolution
-    \item \verb|ls| Reading Comprehension
+    \item \verb|ls -l| displayed the following: \\
+    \verb|-rwxrwxrwx 1 root root    13076 Jan 17  2019|
+    \item \verb|ls -l -h| displayed the following: \\
+    \verb|-rwxrwxrwx 1 root root  13K Jan 17  2019|
 \end{enumerate}
-\textbf{Action:}
+By the looks of things, it will display the file size and the date last modified. \verb|-h|, according to \textit{Solutions}, stands for \textbf{H}uman Readable, and converts the file size to a more readable format. It also states the file type \& the links back to the root directory.\\
+\textbf{Result:} Was able to test out \verb|ls -l| \& \verb|ls -l -h|.
+%
+\subsection{Task 2: Listing Recursively and By Time}
+%
+\textbf{Objective:} To execute and analyse some \texttt{ls} flags associated with recursion and time\\
+\textbf{Action:} Test out the following flags:
 \begin{enumerate}
-    \item Exploring More \verb|ls| Flags: Test out the following flags:
-    \begin{enumerate}
-        \item \verb|ls -l|
-        \item \verb|ls -l -h|
-    \end{enumerate}
-    \item Listing Recursively and By Time: Test out the following flags:
-    \begin{enumerate}
-        \item \verb|ls -R|: List recursively
-        \item \verb|ls -t|: List by time last changed
-        \item \verb|ls -R -t|: Test out what order this is sorted in
-    \end{enumerate}
-    \item Starting from /Users/amanda/data, which of the following commands could Amanda use to navigate to her hoe directory?
-    \item Given the filesystem diagram, if \verb|pwd| displays \verb|/Users/thing|, what will \verb|ls -F ../backup| display?
-    \item If \verb|pwd| displays \verb|/Users/Backup|, what command will result in the output \verb|pnas_sub/ pnas_final/ original/|?
+    \item \verb|ls -R|: List recursively
+    \item \verb|ls -t|: List by time last changed
+    \item \verb|ls -R -t|: Test out what order this is sorted in
 \end{enumerate}
-\textbf{Errors:}
+\textbf{Errors:} No errors were encountered.\\
+\textbf{Analysis:} When comparing \verb|ls -R|; \verb|ls -l -t|; \verb|ls -l -R -t|:
 \begin{enumerate}
-    \item Mistook \verb|-l| for \verb|-1| and didn't display what I wanted. Realised and changed the flag. Worked after that.
-    \item No errors were encountered.
-    \item Was able to navigate my directory around using shell commands without any errors.
-    \item Not Applicable
-    \item Not Applicable
+    \item \verb|ls -R| went through every single file in every single sub-directory in about 10 seconds
+    \item \verb|ls -l -t| listed the files/folders in my directory by time last changed, and when used in conjunction with \verb|-l|, I could see the result
+    \item \verb|ls -l -R -t|: Listed every single file in every sub-directory by time last changed, presented in long form
 \end{enumerate}
+\textbf{Result:} Was able to test out \verb|ls -R| \& \verb|ls -t|;
+%
+\subsection{Task 3: Absolute vs. Relative Path }
+%
+\textbf{Objective:} To analyse the correct way to move the current directory around.\\
+\textbf{Action:} Starting from \texttt{/Users/amanda/data}, analyse what command will get her back to \texttt{/Users/amanda}?\\
+\textbf{Errors:} No errors were encountered.\\
+\textbf{Analysis:} Amanda can use the following:
+\begin{enumerate}
+    \item \verb|cd ~|: \verb|~| stands for the home directory, so \verb|cd ~| navigates to the home directory.
+    \item \verb|cd ~/data/..|: Would navigate to home, down to data, then back up to home. Over-complicated, but it works.
+    \item \verb|cd|: Shortcut to go back home
+    \item \verb|cd ..|: Moves back up one level, which is home.
+\end{enumerate}
+\textbf{Result:} Was able to analyse and be able to move directory around using path commands.
+%
+\subsection{Task 4: Relative Path Resolution}
+%
+\textbf{Objective:} To trace through a relative path given our present working \\directory.\\
+\textbf{Action:} Given the file system diagram, if \verb|pwd| displays \verb|/Users/thing|, what will '\verb|ls -F ../backup|' display?\\
+\includegraphics[width=11cm]{filesystem.png}
+\begin{center}
+    \texttt{https://swcarpentry.github.io/shell-novice/02-filedir/index}\\
+\end{center}
+\textbf{Errors:} No errors were encountered.\\
 \textbf{Analysis:}
+\begin{itemize}
+    \item \verb|ls -F| lists files with their file type
+    \item \verb|..| brings the directory up a level
+    \item \verb|/backup| navigates the directory down a level to the folder \verb|backup|
+\end{itemize}
+Hence, it would display:\\
+\verb|original/ pnas_final/ pnas_sub/|\\
+\textbf{Result:} Was able to correctly identify the result of the command \\\verb|ls -F ../backup|
+%
+\subsection{Task 5: ls Reading Comprehension}
+%
+\textbf{Objective:} To trace through a relative path given our present working directory.\\
+\textbf{Action:} Using the same file system diagram, if \texttt{pwd} displays \texttt{/Users/backup}, and \texttt{-r} tells \texttt{ls} to display things in reverse order, what command(s) will result in the following output:\\
+\verb|pnas_sub/ pnas_final/ original/|\\
+\textbf{Errors:} No errors were encountered.\\
+\textbf{Analysis:} 
 \begin{enumerate}
-    \item When comparing \verb|ls|; \verb|ls -l| \& \verb|ls -l -h|, 
-    \begin{enumerate}
-        \item \verb|ls -l| displayed the following: \\
-        \verb|-rwxrwxrwx 1 root root    13076 Jan 17  2019|
-        \item \verb|ls -l -h| displayed the following: \\
-        \verb|-rwxrwxrwx 1 root root  13K Jan 17  2019|
-    \end{enumerate}
-        By the looks of things, it will display the file size and the date last modified. \verb|-h|, according to \textit{Solutions}, stands for \textbf{H}uman Readable, and converts the file size to a more readable format.\\
-        It also states the file type \& the links back to the root directory.
-    \item: When comparing \verb|ls -R|; \verb|ls -l -t|; \verb|ls -l -R -t|:
-    \begin{enumerate}
-        \item \verb|ls -R| went through every single file in every single sub-directory in about 10 seconds
-        \item \verb|ls -l -t| listed the files/folders in my directory by time last changed, and when used in conjunction with \verb|-l|, I could see the result
-        \item \verb|ls -l -R -t|: Listed every single file in every sub-directory by time last changed, presented in long form
-    \end{enumerate}
-    \item Amanda can use the following:
-    \begin{enumerate}
-        \item \verb|cd ~|: \verb|~| stands for the home directory, so \verb|cd ~| navigates to the home directory.
-        \item \verb|cd ~/data/..|: Would navigate to home, down to data, then back up to home. Over-complicated, but it works.
-        \item \verb|cd|: Shortcut to go back home
-        \item \verb|cd ..|: Moves back up one level, which is home.
-    \end{enumerate}
-    \item \verb|ls -F| lists files with their file type; \verb|..| brings the directory up a level; \verb|/backup| navigates the directory down a level to the folder \verb|backup|. Hence, it would display:\\
-    \verb|original/ pnas_final/ pnas_sub/|
-    \item Because \verb|-r| will list the folders backwards, which is what the given list is listed as, and \verb|-F| will display the file type, which are folders, the correct command would be \verb|ls -r -F|. \verb|ls -r -F /Users/backup| would also work, but is unnecessary as we are already in backup.
+    \item Because \verb|-r| will list the folders backwards, which is what the given list is listed as, and \verb|-F| will display the file type, which are folders, the correct command would be \verb|ls -r -F|. 
+    \item \verb|ls -r -F /Users/backup| would also work, but is unnecessary as we are already in backup.
 \end{enumerate}
-\textbf{Results:}
-\begin{enumerate}
-    \item Was able to test out \verb|ls -l| \& \verb|ls -l -h|.
-    \item Was able to test out \verb|ls -R| \& \verb|ls -t|;
-    \item Was able to analyse and be able to move directory around using path commands.
-    \item Was able to correctly identify the result of the command \verb|ls -F ../backup|
-    \item Was able to correctly identify and analyse the correct command.
-\end{enumerate}
+\textbf{Results:} Successfully identified the correct commands given the objective.
 %%%%%%%%%% New Entry %%%%%%%%%%
 \newpage
 \section{Unix Shell Exercise 3: Files and Directories}
@@ -651,4 +605,569 @@ However, this could be further simplified by using a wildcard:\\
         \item \verb|Ctrl+L|: Clear the shell window
     \end{itemize}
 \end{itemize}
+%%%%%%%%%% New Entry %%%%%%%%%%
+\newpage
+\section{Unix Shell Exercise 4: Pipes and Filters}
+\subsection{Task 1: What does \texttt{sort -n} do?}
+\textbf{Objective: To understand what the \texttt{sort} command and the \texttt{-n} flag do}\\
+\textbf{Action:} Analyse what happens when you sort a list of 6 numbers by \texttt{sort}, then \texttt{sort -n}, and compare the 2.\\
+\textbf{Errors:} No errors were encountered.\\
+\textbf{Analysis:} When using \texttt{sort}, it will sort the numbers vertically, one integer at a time (essentially by ASCII alphabetically) \texttt{sort -n} will treat each number as a whole integer, and sort by integer value instead.\\
+\textbf{Result:} Learned what \texttt{sort} and \texttt{sort -n} do.
+%
+\subsection{Task 2: Overwriting vs. Appending}
+%
+\textbf{Objective:} To distinguish the difference between \verb|>| and \verb|>>|\\
+\textbf{Action:}
+\begin{enumerate}
+    \item Execute the command: \verb|echo hello > textfile01.txt|
+    \item Execute the command: \verb|echo hello >> textfile02.txt|
+    \item Repeat Step 1 \& 2
+    \item Analyse what happens using \texttt{nano}
+\end{enumerate}
+\textbf{Errors:} No errors were encountered\\
+\textbf{Analysis:} The \verb|>| command will overwrite a file with the same name. \verb|>>| will instead append the file.\\
+\textbf{Result:} Learned the difference between \verb|>| and \verb|>>|
+%
+\subsection{Task 3: Appending Data}
+%
+\textbf{Objective:} To analyse the result when using \texttt{head}, \texttt{tail}, and \verb|>>|\\
+\textbf{Action:} Run the following lines:\\
+\verb|$ head -n 3 animals.txt > animals-subset.txt|\\
+\verb|$ tail -n 2 animals.txt >> animals-subset.txt|\\
+\textbf{Errors:} No errors were encountered\\
+\textbf{Analysis:} The first line took the first 3 lines of \texttt{animals.txt} as sorted numerically, and placed them in a newely created \texttt{animals-subtext.txt}. The second line took the last 2 lines as sorted numerically, and appended them to \texttt{animals-subtext.txt}.\\
+\textbf{Result:} Understood how \texttt{head}, \texttt{tail}, and \verb|>>| can be used to append files from sorted data.
+%
+\subsection{Task 4: Piping Commands Together}
+%
+\textbf{Objective:} To analyse 4 different chained piping commands and determine the correct output: find the 3 files with the least number of lines.\\
+\textbf{Action:} Analyse the following 4 commands and determine the correct one:
+\begin{verbatim}
+    wc -l * > sort -n > head -n 3
+    wc -l * | sort -n | head -n 1-3
+    wc -l * | head -n 3 | sort -n
+    wc -l * | sort -n | head -n 3
+\end{verbatim}
+\textbf{Errors:} No errors were encountered\\
+\textbf{Analysis:}
+\begin{enumerate}
+    \item The first command doesn't uses pipes and will output an error
+    \item The second command uses incorrect syntax for \texttt{head}
+    \item The third command will take the line count of the first 3 files, not the sorted files
+    \item The forth command will count the lines, sort the lines numerically, then take the first 3 files, which are now sorted. Therefore, this is the correct command.
+\end{enumerate}
+\textbf{Results:} The forth command is the correct one, hence was able to correctly trace each command.
+%
+\subsection{Task 5: Pipe reading comprehension}
+%
+\textbf{Objective:} To analyse a pipe chained command and determine its output.
+\textbf{Action:} Using the file \verb|animals.txt| in the \texttt{data-shell} folder, analyse what the following command does:\\
+\texttt{cat animals.txt | head -n 5 | tail -n 3 | sort -r > final.txt}\\
+\textbf{Errors:} No errors were encountered\\
+\textbf{Analysis:}
+\begin{enumerate}
+    \item The first command simply prints the file since there is only 1 file argument
+    \item The second command takes the first 5 lines of the file
+    \item The third command takes the last 3 lines of the first 5 lines of the file
+    \item The forth command sorts those 3 lines alphanumerically, then flips it\\/reverses it.
+    \item The fifth command prints the result into the file \texttt{final.txt}, which doesn't exist, and hence creates the file in the current directory.
+\end{enumerate}
+\textbf{Results:} Was able to correctly analyse the output of the chained pipe command
+%
+\subsection{Task 6: Pipe Construction}
+%
+\textbf{Objective:} To construct a piped command, combining a \texttt{cut} command with a \texttt{uniq} command\\
+\textbf{Action:} Pipe the following command such that the output can then be used with the \texttt{uniq} command:
+\begin{verbatim}
+    $ cut -d , -f 2 animals.txt
+\end{verbatim}
+\textbf{Errors:} No errors were encountered\\
+\textbf{Analysis:} The \texttt{cut} function will create a list on animals. Because \texttt{uniq} requires the same line to be adjacent, it is necessary to sort the data before using this command. Hence, the piped command line is as follows:
+\begin{verbatim}
+    $ cut -d , -f 2 animals.txt | sort | uniq
+\end{verbatim}
+\textbf{Results:} Was able to analyse and construct the correct piped command.
+%
+\subsection{Task 7: Which Pipe?}
+%
+\textbf{Objective:} To analyse and implement the \texttt{-c} flag for the \texttt{uniq} command.\\
+\textbf{Action:} From Task 6, what is the correct piped command to include the count of each animal's occurance?\\
+\textbf{Errors:} No errors encountered\\
+\textbf{Analysis:} Because \texttt{uniq -c} prints out the count, the correct piped command is as follows:
+\begin{verbatim}
+    $ cut -d , -f 2 animals.txt | sort | uniq -c
+\end{verbatim}
+\textbf{Results:} Was able to identify the correct use of \texttt{uniq -c}
+%
+\subsection{Task 8: Wildcard Expressions}
+%
+\textbf{Objective:} To analyse how to search for files without using the \texttt{[]} syntax
+\textbf{Action:}
+\begin{enumerate}
+    \item What expressions are needed when not using \texttt{[]}?
+    \item What is the difference?
+    \item What circumstances would these new expressions return an error?
+\end{enumerate}
+\textbf{Errors:} No errors were encountered\\
+\textbf{Analysis:} Because these are 2 separate searches, you would need to do 2 separate commands:
+\begin{verbatim}
+    $ ls *A.txt
+    $ ls *B.txt
+\end{verbatim}
+The difference is that you would have to run 2 separate commands, rather than one command.\\
+It would output an error if there were files ending in A for the first search, and files ending in B for the second search.\\
+\textbf{Results:} Correctly identified what would be needed without the \texttt{[]} syntax
+%
+\subsection{Task 9: Removing Unneeded Files}
+%
+\textbf{Objective:} To identify how to remove unneeded files\\
+\textbf{Action:} In a folder which a collection of unwanted \texttt{.txt} files, how would you remove them all in one command?\\
+\textbf{Errors:} No errors were encountered\\
+\textbf{Analysis:} You would simply use the wildcard syntax in combination with \texttt{rm}:\\
+\verb|$ rm *.txt|\\
+\textbf{Result:} Correctly identified how to bulk remove a collection of data in the same file type.
+%%%%%%%%%% New Entry %%%%%%%%%%
+\section{Unix Shell Exercise 5: Loops}
+%
+\subsection{Task 1: Variables in Loops}
+%
+\textbf{Objective:} To analyse the difference between 2 loops\\
+\textbf{Action:} Using the \texttt{molecules} folder in \texttt{data-shell} folder, run the following 2 loops and explain the results:
+\begin{verbatim}
+    $ for datafile in *.pdb
+    > do
+    >    ls *.pdb
+    > done
+    $ for datafile in *.pdb
+    > do
+    >	ls $datafile
+    > done
+\end{verbatim}
+\textbf{Errors:} No errors were encountered\\
+\textbf{Analysis:}
+\begin{enumerate}
+    \item The first loop expands the wildcard, which includes 6 files, then lists those 6 files for each time it identifies those 6 files, hence all 6 files are listed 6 times.
+    \item The second loop will list each datafile as it is encountered, hence each file is listed once consecutively.
+\end{enumerate}
+\textbf{Result:} Correctly identified the difference between each loop.
+%
+\subsection{Task 2: Limiting Sets of files}
+%
+\textbf{Objective:} To analyse 2 different loops and identify the correct result of the loop.\\
+\textbf{Action:} Trace each loop (using the \texttt{molecules} folder) and pick the correct output:
+\begin{verbatim}
+    $ for filename in c*
+    > do
+    >    ls $filename
+    > done
+    $ for filename in *c*
+    > do
+    >    ls $filename
+    > done
+\end{verbatim}
+\textbf{Errors:} No errors were found\\
+\textbf{Analysis:}
+\begin{enumerate}
+    \item The first loop will print all files which begin with a c, which is one file: \texttt{cubane.pdb}.
+    \item The second loop will print all files with contain a c, which are two files: \texttt{cubane.pdb; octane.pdb}
+\end{enumerate}
+\textbf{Result:} Correctly identified the output of each loop.
+%
+\subsection{Task 3 and 4: Saving to a file in a Loop}
+%
+\textbf{Objective:} To trace 2 different loops which also saves to a file and identify the result.\\
+\textbf{Action:} Trace through both loops and identify the output:
+\begin{verbatim}
+    for alkanes in *.pdb
+    do
+        echo $alkanes
+        cat $alkanes > alkanes.pdb
+    done
+    
+    for datafile in *.pdb
+    do
+        cat $datafile >> all.pdb
+    done
+\end{verbatim}
+\textbf{Errors:} No errors were encountered.\\
+\textbf{Analysis:}
+\begin{enumerate}
+    \item For the first loop, each filename is printed on screen, but because \texttt{>} overwrites a file, only the contents of the last file \texttt{pentane.pdb} will be written into the file.
+    \item For the second loop, the contents of each file will be concatenated into the file \texttt{all.pdb} because of the \texttt{>>} command. Nothing is printed on screen.
+\end{enumerate}
+\textbf{Result:} Correctly identified the result of each loop.
+%
+\subsection{Task 5: Doing a dry run}
+%
+\textbf{Objective:} To analyze 2 loops, and determine which one will print the commands rather than executing the commands.\\
+\textbf{Action:} Run the following 2 loops from the \texttt{molecules} folder and observe their outputs, followed by choosing which loop prints rather than executes:
+\begin{verbatim}
+    # Version 1
+    $ for file in *.pdb
+    > do
+    >   echo analyze $file > analyzed-$file
+    > done
+    # Version 2
+    $ for file in *.pdb
+    > do
+    >   echo "analyze $file > analyzed-$file"
+    > done
+\end{verbatim}
+\textbf{Errors:} No errors were encountered.\\
+\textbf{Results:} 
+\begin{enumerate}
+    \item The first loop will divert \verb|analyze $file| to the file \verb|analyzed-$file|, and will do that for each file, creating 6 new files.
+    \item The second loop will print out everything in the quotation marks, and hence will print off each iteration of the loop without executing them. Hence, the second loop will print instead of execute.
+\end{enumerate}
+\textbf{Results:} Was able to run both loops and identify that the second loop will print rather than execute the commands.
+%
+\subsection{Task 6: Nested Loops}
+%
+\textbf{Objective:} To analyze the result of a nested loop\\
+\textbf{Action:} Run the following nested loop and analyse the result:
+\begin{verbatim}
+    $ for species in cubane ethane methane
+    > do
+    >     for temperature in 25 30 37 40
+    >     do
+    >         mkdir $species-$temperature
+    >     done
+    > done
+\end{verbatim}
+\textbf{Errors:} No errors were encountered\\
+\textbf{Analysis:} Each inner loop will run completely for each iteration for the outer loop, hence 12 different directories will be created.\\
+\textbf{Result:} Was able to analyse what a nested loop does.
+%%%%%%%%%% New Entry %%%%%%%%%%
+\section{Shell Scripts}
+%
+\subsection{Task 1: List Unique Species}
+%
+\textbf{Objective:} To create a script that takes any number of filenames as command-line arguments, print a list of the unique species appearing in each of those files\\
+\textbf{Action:}
+\begin{enumerate}
+    \item Create a shell script called \texttt{species.sh}
+    \item Modify the following command to produce the objective:
+    \begin{verbatim}
+        cut -d , -f 2 animals.txt | sort | uniq
+    \end{verbatim}
+\end{enumerate}
+\textbf{Errors:}
+    \begin{verbatim}
+        species.sh: line 5: $: command not found
+        species.sh: line 7: -d: command not found
+    \end{verbatim}
+    There is no need to type out the syntax \verb|$| or \verb|>|, deleting these fixed both errors
+\textbf{Analysis:} I recognised, as we are executing the same commands for each file, we would need a loop. I was unable to construct the loop until looking at the solution, then after a 5 minute break, tried again, and was able to create the loop and understand it.\\
+\textbf{Result:} Was able to create the shell script and run correctly after consulting the solution and removing the errors.
+%
+\subsection{Task 2: Why Record Commands in the History Before Running Them?}
+%
+\textbf{Objective:} To analyse why the shell records the commands in the history before running them\\
+\textbf{Action:} Identify why the shell would do this\\
+\textbf{Errors:} No errors were encountered\\
+\textbf{Analysis:} If a command causes a fatal error to the shell, the history will record the command before it executes it, such that we can then determine what command it was that caused the error. If it didn't, we wouldn't know what command caused the error other than our memory, which is not as reliable as a documented source, and hence can prevent doing the same thing in the future.\\
+\textbf{Results:} Identified why the shell records a command in the history before it runs it.
+%
+\subsection{Task 3: Variables in Shell Scripts}
+%
+\textbf{Objective:} To analyse the output of a shell script\\
+\textbf{Action:} Using the following shell script:
+\begin{verbatim}
+    head -n $2 $1
+    tail -n $3 $1
+\end{verbatim}
+What is the output given the following input?\\
+\verb|bash script.sh '*.pdb' 1 1|\\
+\textbf{Errors:} No errors were encountered\\
+\textbf{Analysis:} Because the wildcard expands to all \verb|.pdb| files in the directory, and the commands are not piped, the shell script will output the first line and the last line of all \verb|.pdb| files in the directory.\\
+\textbf{Results:} Was able to successfully analyse the output given the shell script and the input.
+%
+\subsection{Task 4: Find the Longest File with a Given Extension}
+%
+\textbf{Objective:} To write a script, taking a directory as variable 1 \& a file extension as variable 2, which will output the file in that directory with the most lines.
+\textbf{Action:}
+\begin{enumerate}
+    \item Be able to navigate to the directory and print out the line count for a specific file with the given extension:\\\verb|wc -l $1/propane.$2|
+    \item Be able to print out the line count for all files with the given extension:\\\verb|wc -l $1/*.$2|
+    \item Take the line count output and sort from biggest to smallest: 
+    \begin{verbatim}
+        wc -l $1/*.$2 | sort -n -r
+    \end{verbatim}
+    \item Parse the output to only show the file with the largest line count:
+    \begin{verbatim}
+        wc -l $1/*.$2 | sort -n -r | head -2 | tail -1
+    \end{verbatim}
+\end{enumerate}
+\textbf{Errors:} When testing the script, I forgot I had to write out the directory from the root directory, and not just from the current working directory. Was getting the following error: \\\verb|longest.sh: line 10: cd: /molecules: No such file or directory|.\\
+When I tested the script out by inputting the entire directory, it worked fine.
+\textbf{Analysis:} I found I was getting ahead of myself, thinking about loops and trying to construct it all at once. When I started taking it one step at a time, I was able to get an initial, successful output, and built the script one step at a time until I got the correct output. My script wasn't the most efficient as I reversed the sort for visual clarity's sake, but this could impact time when dealing with larger data sets. It is necessary to use both \verb|head| and \verb|tail| and \verb|wc| will also output the total lines, and is necessary to parse that information as well.\\
+\textbf{Result:} After fixing my initial error, was able to successfully construct a script which will output the file with the largest line count given the directory and the file extension.
+%
+\subsection{Task 5: Script reading comprehension}
+%
+\textbf{Objective:} To analyse the output of 3 given scripts\\
+\textbf{Action:} Trace through the following 3 scripts given the input variable \verb|*.pdb|
+\begin{verbatim}
+    # Script 1
+    echo *.*
+    # Script 2
+    for filename in $1 $2 $3
+    do
+        cat $filename
+    done
+    # Script 3
+    echo $@.pdb
+\end{verbatim}
+\textbf{Errors:} Was unable to successfully analyse the second shell script\\
+\textbf{Analysis:}
+\begin{enumerate}
+    \item The first script will output any file with a dot in the name in the directory, as the argument isn't actually passed to the script.
+    \item After consulting the solution, I now understand how it works. Because the wildcard expands to all files ending in \verb|.pdb|, it would then pass the first 3 files to the script as arguments. It would then concatenate the contents of the first 3 files
+    \item the \verb|$@.pdb| would simply print all the files ending in \verb|.pdb| in that directory.
+\end{enumerate}
+\textbf{Result:} Was able to successfully analyse the first and third script, and understand the second script after consulting the solution.
+\subsection{Task 6: Debugging Scripts}
+\textbf{Objective:} To analyse what the flag \verb|bash -x| does, and how it can help identify errors.\\
+\textbf{Action:} Run the previous \verb|longest.sh| script with the bash flag, and analyse what it does. Then, identify what it can be used for?\\
+\textbf{Errors:} No errors were identified.\\
+\textbf{Analysis:} The \texttt{-x} flag is used to force bash to enter debugging mode, which runs the execution of the script line by line and print it out. If it encounters a human error and not a command line error, it allows the user to identify what part of the script fails to run, rather than resulting in no output.\\
+\textbf{Result:} Identified that \verb|bash -x| forces bash to enter debugging mode, which is useful for identifying human-made errors.
+
+%%%%%%%%%% New Entry %%%%%%%%%%
+\newpage
+\section{Finding Things}
+%
+\subsection{Task 1: Using grep}
+%
+\textbf{Objective:} Identify which command will produce the given output.\\
+\textbf{Action:} Using the \texttt{haiku.txt} in \verb|data-shell/writing|, which output will display the line\\ \texttt{and the presence of absence:}:
+\begin{verbatim}
+    1. grep "of" haiku.txt
+    2. grep -E "of" haiku.txt
+    3. grep -w "of" haiku.txt
+    4. grep -i "of" haiku.txt
+\end{verbatim}
+\textbf{Errors:} No errors were encountered.\\
+\textbf{Analysis:}
+\begin{enumerate}
+    \item Command 1 will print of the required line plus the line containing the word s\textbf{of}tware
+    \item Command 2 will do the same as command 1
+    \item Command 3 will only print the required line, as it looks for whole words which match only
+    \item Command 4 will do the same as 1 \& 2, as case doesn't matter for either line.
+\end{enumerate}
+\textbf{Result:} Successfully analysed the various different outputs of grep.
+%
+\subsection{Task 2: Tracking a species}
+%
+\textbf{Objective:} To write a shell script which takes a species as argument 1, and a directory as argument 2, which returns a file titled \verb|<species>.txt| containing a list of dates with the number of sightings. Use \verb|animals.txt| as an example in \verb|data-shell/data/animal-counts|.\\
+\textbf{Action:} Arrange the following commands and pipes to produce the required result:
+\begin{verbatim}
+    cut -d : -f 2
+    >
+    |
+    grep -w $1 -r $2
+    |
+    $1.txt
+    cut -d , -f 1,3
+\end{verbatim}
+\textbf{Errors:} No errors were encountered\\
+\textbf{Analysis:} The correct solution was produced, however took some trial and error:
+\begin{verbatim}
+    rep -w $1 -r $2 | cut -d : -f 2 | cut -d , -f 1,3  > $1.txt
+    \end{verbatim}
+\begin{enumerate}
+    \item The first command will look for the target animal, matching it by whole words, recursively each file in the directory through the directory.
+    \item The second command will cut the second field after the delimiter \texttt{:}
+    \item The third command will cut fields 1 \& 3 separated by the \texttt{,} delimiter, then moves it to a file titled by the animal species.
+\end{enumerate}
+\textbf{Result:} After trial-and-error, was able to successfully construct the correct shell.
+%
+\subsection{Task 3: Little Women}
+%
+\textbf{Objective:} To write a script which counts the number of times each sister is counted in the text \textbf{Little Women}.\\
+\textbf{Action:}
+\begin{enumerate}
+    \item Use \texttt{grep} to find the lines 1 sister is located in the text:
+    \begin{verbatim}
+        grep -ow $sis LittleWomen.txt
+    \end{verbatim}
+    \item Use a pipe to count the number of times one sister is found:
+    \begin{verbatim}
+        grep -ow $sis LittleWomen.txt | wc -l
+    \end{verbatim}
+    \item Use a loop to count for each sister
+    \begin{verbatim}
+        For $sis in Jo Meg Beth Amy
+        do
+          echo $sis:
+          grep -ow $sis LittleWomen.txt | wc -l
+        done
+    \end{verbatim}
+\end{enumerate}
+\textbf{Errors:} No errors were encountered\\
+\textbf{Analysis:} By breaking the problem into steps again, it was easy enough to construct a script which counts the number of times a sister is mentioned, and looped for each sister.\\
+\textbf{Result:} Successfully created a script which counts the number of times each sister was mentioned in the book \textbf{Little Women}.
+%
+\subsection{Task 4: Matching and Subtracting}
+%
+\textbf{Objective:} To analyse which command identifies which files in \texttt{data} end in \texttt{s}, but do \textit{not} contain the word \texttt{net}.\\
+\textbf{Action:} Analyse the following 3 commands:
+\begin{verbatim}
+    find data -name '*s.txt' | grep -v net
+    find data -name *s.txt | grep -v net
+    grep -v "temp" $(find data -name '*s.txt')
+\end{verbatim}
+\textbf{Errors:} No errors were encountered.\\
+\textbf{Analysis:}
+\begin{enumerate}
+    \item The first command finds all texts which end in \texttt{s}, then from that list, find all the texts which contain the word \texttt{net} and inverses the search. Hence, this is the correct one.
+    \item The second command expands the wildcard before running the command, hence it will only find text files in the data subdirectory, which is incorrect.
+    \item The third command finds all texts which end in \texttt{s}, then from that list, finds all the text's contents which contain the word "temp" and inverses the search, which is incorrect.
+\end{enumerate}
+\textbf{Result:} Successfully analysed the commands and identified the correct command for the given objective.
+%
+\subsection{Task 5: find Pipeline Reading Comprehension}
+%
+\textbf{Objective:} To analyse and describe a \texttt{find} piped command.\\
+\textbf{Action:} Describe the following command in words:
+\begin{verbatim}
+    wc -l $(find . -name '*.dat') | sort -n
+\end{verbatim}
+\textbf{Errors:} No errors were encountered.\\
+\textbf{Analysis:} 
+\begin{enumerate}
+    \item The shell will start with what is inside the brackets. This find command will find all files within the \texttt{pwd}'s directory/subdirectories which end in \texttt{.dat}.
+    \item The shell will then cound the lines of each \texttt{.dat} file found.
+    \item The shell will then sort the line counts of each \texttt{.dat} file numerically.
+\end{enumerate}
+\textbf{Result:} Successfully analysed the given piped command.
+%
+\subsection{Task 6: Finding Files with Different Properties}
+%
+\textbf{Objective:} To create a command using \texttt{find} that will locate which files in or below the current directory are owned to the user \texttt{ahmed}, which were modified within the last 24 hours.\\
+\textbf{Action:}
+\begin{itemize}
+    \item \texttt{-type f} will locate only files
+    \item \texttt{-user ahmed} will locate files owned to \texttt{ahmed}
+    \item \texttt{-mtime -1} will locate files modified within the last 24 hours
+\end{itemize}
+Hence, the correct command is:
+\begin{verbatim}
+    find ./ -type f -mtime -1 -user ahmed
+\end{verbatim}
+\textbf{Errors:} No errors were encountered\\
+\textbf{Analysis:} The shell calculates modified time based on 24 hour blocks. When it locates a file, it will disregard the fraction part and only focus on the 24-hour part. This command also specifies numerical values as follows:
+\begin{verbatim}
+    +n     for greater than n,
+    -n     for less than n,
+     n      for exactly n.
+\end{verbatim}
+Hence, there are 3 possible scenario's in this case:
+\begin{itemize}
+    \item \texttt{-mtime -1}: The file is modified less than 1x 24 hours ago. This is because anything less than 24 hours will return a 0, which is less than 1.
+    \item \texttt{-mtime 1}: The file is modified between 24-48 hours ago. This is because anything in this time frame will return a 1.
+    \item \texttt{-mtime +1} The file is modified more than 48 hours ago. This is because anything in this time frame will return 2 or more.
+\end{itemize}
+Therefore, \texttt{-mtime} needs a \texttt{-1}.\\
+\textbf{Result:} Successfully analysed and executed the correct command given the objective.
+
+
+%%%%%%%%%% New Entry %%%%%%%%%%
+\newpage
+\section{Further Syntax \& Commands for the Unix Shell}
+\textbf{Objective:} To document helpful syntax and commands learned so far when using the Unix shell.\\
+\textbf{Action:}
+\begin{itemize}
+    \item Shell Syntax
+    \begin{itemize}
+        \item \texttt{|}: Pipe (Use the command on the left's output as the input for the command on the right). Can be thought of as \textbf{and then}.
+        \item \texttt{[xy]}: the logical operator OR (eg: x OR y) 
+    \end{itemize}
+    \item Shell Commands \& Flags
+    \begin{itemize}
+        \item \texttt{wc <file>}: Word count, presented as \texttt{Lines Words Characters}
+        \begin{itemize}
+            \item \texttt{-l}: Displays only line count
+            \item \texttt{-w}: Displays only word count
+            \item \texttt{-c}: Displays only character count
+        \end{itemize}
+        \item \verb|> <filename.txt>|: Directs output into a text file, created in the command directory, or overwritten if it already exists
+        \item \verb|>> <filename.txt>|: Directs output into a text file. If it already exists, it will append the file, rather than overwriting it.
+        \item \texttt{cat <file>}: Concatenates file such that it prints the contents of the file(s) one after another
+        \item \texttt{less <file>}: Similar to \texttt{cat}, but that it will only print the screen length, where the user can then print the next page-full with \texttt{space}, \texttt{b} to go back a page, or \texttt{q} to quit.
+        \item \texttt{sort}: Sort the file alphanumerically
+        \begin{itemize}
+            \item \verb|-n|: Sort numerically
+            \item \verb|-r|: Sort in reverse
+        \end{itemize}
+        \item \texttt{head -n <x> <file>}: Print the first x lines of a file
+        \item \texttt{tail -n <x> <file>}: Print the last x lines of a file
+        \item \verb|history|: Displays the history of commands used in the current session
+        \item \texttt{cut -d <delimiter> -f <column number>}: Cut out data.\\ The data needs to be separated by a delimiter, eg: a comma. The \texttt {-f} specifies which specific 'field' or column you want to cut out.
+        \item \texttt{uniq}: Filter out adjacent matching lines.
+        \begin{itemize}
+            \item \texttt{-c}: Count the number of times a line occurs
+        \end{itemize}
+        \item \verb|grep|: 'Global/Regular Expression/Print' - similar to 'find line'. Is case sensitive.
+        \begin{itemize}
+            \item \texttt{-w}: Limits matches to word boundaries
+            \item \verb|"phrase here"|: Searches for exact match of phrase
+            \item \texttt{-n}: Include line number
+            \item \texttt{-i}: Case-insensitive
+            \item \texttt{-v}: Invert (exclude lines with matches)
+        \end{itemize}
+        \item \texttt{find <directory>}: Find a file within the cd's subdirectories
+            \begin{itemize}
+                \item \verb|-type d|: Find directories
+                \item \verb|-type -f|: Find files
+                \item \verb|-name|: Find name of file
+                \item \verb|-name '*.extension'| Correct way to use wildcard in \texttt{find}
+            \end{itemize}
+    \end{itemize}
+    \item Keyboard Shortcuts/Metacharacters
+    \begin{itemize}
+        \item \verb|Ctrl + C|: Cancel current command or currently typed command
+        \item \verb|Ctrl + D|: Disconnect (Close the command)
+        \item \verb|Ctrl + S|: Stop accepting input
+        \item \verb|Ctrl + Z|: Suspend command
+        \item \verb|Up Arrow|: Cycle through the last used command
+        \item \verb|Down Arrow|: Cycle down through commands
+        \item \verb|Ctrl + A|: Move to the start of the command line
+        \item \verb|Ctrl + E|: Move to the end of the command line
+        \item \verb|!!| Retrieves the last command used
+        \item \verb|!$| Retrieves the last word of the last command used
+    \end{itemize}
+    \item Looping algorithms:
+    \begin{itemize}
+        \item For loop:
+        \begin{verbatim}
+            $ for thing in list_of_things
+            > do
+            >   operation_using $thing    # Indentation 
+                within the loop is not required, but 
+                aids legibility
+            >done
+        \end{verbatim}
+        \begin{itemize}
+            \item A ; can be used to separate commands on a single line
+            \item \verb|$variablename| becomes a variable
+            \item \verb|"file name with spaces"| - use double quotes around a file name with spaces
+        \end{itemize}
+    \end{itemize}
+    \item Shell Scripting:
+    \begin{itemize}
+        \item \verb|bash <script> <arguments>|: Run a script and pass the arguments to the script.
+        \begin{itemize}
+            \item \verb|-x| Debugging mode
+        \end{itemize}
+        \item \verb|"$1"|: First variable. Quotations means variables with spaces don't output errors
+        \item \verb|"$@|: all the arguments given to a shell script.
+        \item \verb|#| Comment
+    \end{itemize}
+\end{itemize}
+
+
+
+
 \end{document}
