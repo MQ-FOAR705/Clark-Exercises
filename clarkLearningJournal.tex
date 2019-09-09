@@ -1,11 +1,12 @@
+%%% SETUP %%%
 \documentclass{article}
 \usepackage[utf8]{inputenc}
-\usepackage{titling}
+\usepackage{titling} %Subtitle Package
 \usepackage{setspace}
 \setcounter{secnumdepth}{0} %Table of contents without numbers
-\usepackage{graphicx}
-\graphicspath{ {./} }
 
+%  Subtitle Setup %
+% https://tex.stackexchange.com/questions/50182/subtitle-with-the-maketitle-page
 \newcommand{\subtitle}[1]{%
   \posttitle{%
     \par\end{center}
@@ -13,21 +14,30 @@
     \vskip0.5em}%
 }
 
+% Graphics %
+% https://en.wikibooks.org/wiki/LaTeX/Importing_Graphics
+\usepackage{graphicx}
+\graphicspath{ {./} }
+
+%Double Spacing%
 \doublespacing
 
+%  Title Page Setup %
 \title{Learning Journal}
 \subtitle{FOAR705 2019}
 \author{Matthew Clark}
 \date{\vspace{-5ex}} %Used to remove date when using \maketitle%
-%%%%%%%%%% Title Page & Contents %%%%%%%%%%
+% /Title Page Setup %
+%%%%% /SETUP %%%%%
+%%%%%  Title Page %%%%%
 \begin{document}
 \maketitle
+%%%%% /Title Page %%%%%
+%%%%%  Table of Contents %%%%%
 \newpage
 \tableofcontents
-%%%%%%%%%% New Title %%%%%%%%%%
-\newpage
-\title{Data Carpentry Journal + Overleaf notes}
-\maketitle
+%%%%% /Table of Contents %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%% New Entry %%%%%%%%%%
 \newpage
 \begin{center}
