@@ -3,6 +3,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{titling} %Subtitle Package
 \usepackage{setspace}
+\usepackage{hyperref}
 \setcounter{secnumdepth}{0} %Table of contents without numbers
 
 %  Subtitle Setup %
@@ -1176,8 +1177,154 @@ Therefore, \texttt{-mtime} needs a \texttt{-1}.\\
         \item \verb|#| Comment
     \end{itemize}
 \end{itemize}
-
-
-
-
+%%%%%%%%%% New Title %%%%%%%%%%
+\newpage
+\title{OpenRefine Carpentry}
+\maketitle
+%%%%%%%%%% New Entry %%%%%%%%%%
+\newpage
+\section{OpenRefine Exercises 1: Working with OpenRefine}
+\subsection{Setting up OpenRefine}
+\textbf{Objective:} To download, setup, and open OpenRefine.\\
+\textbf{Action:}
+\begin{enumerate}
+    \item Go to the OpenRefine website and download the appropriate .zip file:\\
+    \url{http://openrefine.org/}
+    \item Unzip the downloaded file
+    \item Double click on \texttt{openrefine.exe}
+    \item If nothing opens automatically, open web browser and navigate to \texttt{localhost:3333}
+\end{enumerate}
+\textbf{Errors:} No errors were encountered.\\
+\textbf{Analysis:} Was able to successfully open and load OpenRefine. As a note, if any unknown issues occur while loading OpenRefine, try launching \texttt{refine.bat} before retrying.\\
+\textbf{Result:} Successfully downloaded and opened OpenRefine.
+%
+\subsection{Identifying Potential Errors}
+\textbf{Objective:} To identify errors by sorting a text facet.\\
+\textbf{Action:}
+\begin{enumerate}
+    \item Open up the \texttt{SAFI-openrefine.csv} file in OpenRefine
+    \item Click on the down arrown on the \texttt{village} column and choose \texttt{Facet > Text facet}
+    \item Sort the data by name using the left panel
+    \item Identify any potential errors
+\end{enumerate}
+\textbf{Errors:} No errors were encountered\\
+\textbf{Analysis:}
+\begin{itemize}
+    \item There is a misspelling of \textit{Chirodzo} as \textbf{Chirdozo}
+    \item There is a misspelling of \textit{Ruaca} as \textit{Ruca}
+    \item There are 2 entries which refer to the same places, however are differentiated due to spaces in the names:\\
+    \textit{Ruaca - Nhamuenda} and \textit{Ruaca-Nhamuenda}
+    \item There is an entry \textit{49}, which is most likely not a place
+\end{itemize}
+\textbf{Results:} Was able to correctly identify errors in a given facet
+\subsection{Using facets}
+\textbf{Objective:} To use facets in multiple ways to extract needed data\\
+\textbf{Action:}
+\begin{enumerate}
+    \item Using faceting, identify how many different \textit{interview\_date} values occur
+    \item Identify if this column is formatted as Text or Date
+    \item Produce a timeline display using faceting by using the following:\\
+    \texttt{Edit Cells > Common transforms > To date}
+    \item What period had the most interviews?
+\end{enumerate}
+\textbf{Errors:} No errors were encountered.\\
+\textbf{Analysis:}
+\begin{enumerate}
+    \item By using a Text facet on the \textit{interview\_date} column, it presented 19 different results
+    \item By selecting a cell to edit, the cell states that the \textit{Data type} is \textit{text}
+    \item Was able to produce a timeline display by converting data to \textit{Date}, then using \texttt{Facet > Timeline facet}
+    \item From the produced timeline facet, the period which had the most interviews was November 2016
+\end{enumerate}
+\textbf{Result:} Was able to use facets to extract required data.
+\subsection{Transforming Data}
+\subsubsection{Exercise 1}
+\textbf{Objective:} Use the \textit{Transform} functions to remove unnecessary formatting\\
+\textbf{Action:} Use the \texttt{value.replace} function to remove spaces, \texttt{'}, and \texttt{]}.\\
+\textbf{Errors:} No Errors Encountered\\
+\textbf{Analysis:} Given the example, the following formulas are used:
+\begin{itemize}
+    \item \texttt{value.replace("'", "")}
+    \item \texttt{value.replace("]", "")}
+    \item \texttt{value.replace(" ", "")}
+\end{itemize}
+\textbf{Results:} Successfully used the \texttt{value.replace} function to remove unnecessary formatting\\
+\subsubsection{Exercises 2-4}
+\textbf{Objective:} To clean up the data to anaylse the following questions.\\
+\textbf{Action:}
+\begin{enumerate}
+    \item What are the two items most commonly owned? Which are the two least commonly owned?
+    \item Which month(s) were farmers more likely to lack food?
+\end{enumerate}
+\textbf{Errors:} No errors were encountered\\
+\textbf{Analysis:}
+\begin{enumerate}
+    \item The most commonly owned item are mobile phones and radios. The least owned item are cars and computers.
+    \item The most likely month for farmers to lack food is November.
+\end{enumerate}
+\textbf{Results:} Successfully cleaned up the columns necessary to answer the required questions.\\
+\section{OpenRefine Exercises 2: Filtering and Sorting}
+\subsection{Task 1: Filtering}
+\textbf{Objective:} Using filters, answer the following questions:\\
+\textbf{Action:}
+\begin{enumerate}
+    \item What roof are selected by this procedure?
+    \item How would you restrict this to only one of the roof types?
+\end{enumerate}
+\textbf{Errors:} No errors were encountered.\\
+\textbf{Analysis:}
+\begin{enumerate}
+    \item Mabatipiched and mabatisloping
+    \item To restrict the filter, simply keep typing the required name into the filter until only one is shown
+\end{enumerate}
+\textbf{Result:} Was able to use filters to filter out a certain term
+\subsection{Task 2: Excluding Entries}
+\textbf{Objective:} To use the include/exclude entries in a facet to select a certain term\\
+\textbf{Action:} Use the include/exclude entries to only select one of the previous roof types.\\
+\textbf{Errors:} No errors were encountered.\\
+\textbf{Analysis:} To do so:
+\begin{enumerate}
+    \item Click on one of the required roof type cells, and click include.
+    \item Repeat on the other required roof type. Now both are included, and the rest are excluded.
+\end{enumerate}
+\textbf{Results:} Successfully included fields and excluded others in a facet.
+\subsection{Task 3: Sort}
+\textbf{Objective:} To sort a column's data to identify potential data errors or missing data\\
+\textbf{Action:} Sort the \texttt{gps\_Altitide} column and identify any incorrect altitudes\\
+\textbf{Errors:} No errors were encountered\\
+\textbf{Analysis:} By sorting the data, there are a few cells which have a value of 0, which indicates there are some missing data.\\
+\textbf{Results:} Successfully used sorting to identify missing data
+\subsection{Task 4: Sorting by multiple columns}
+\textbf{Objective:} To use a multiple column sort\\
+\textbf{Action:}
+\begin{enumerate}
+    \item Sort \texttt{gps\_Longitude} as a number with the largest first
+    \item Add a sort of \texttt{gps\_Lattitude} as a number with the largest first
+    \item On the \texttt{village} column, select \texttt{Edit Column > Move Column to end}
+    \item Scroll down until you find village \texttt{49}. Can you tell from it's GPS coordinates which village it belongs to?
+    \item Now sort only by \texttt{interview\_date} as date. Does the row where village is \texttt{49} group with one particular village? Is it the same village as when comparing GPS coordinates?
+\end{enumerate}
+\textbf{Errors:} No Errors were encountered\\
+\textbf{Analysis:}
+\begin{itemize}
+    \item When sorting by both GPS and interview dates, village \texttt{49} correlates to clusters of Chirodzo interviews, hence the village is probably Chirodzo.
+\end{itemize}
+\textbf{Results:} Was able to successfully utilize and manipulate data using multiple sorts.
+\section{OpenRefine Exercises 3: Examining Numbers}
+\subsection{Task 1: Transforming Numbers}
+\textbf{Objective:} To attempt to transform a column without numerical values\\
+\textbf{Action:} Select the \texttt{village} and go \texttt{Edit cells > Common transforms > To number} and see what happens\\
+\textbf{Errors:} No errors were encountered\\
+\textbf{Analysis:} Only numerical columns can be transformed into numbers. After applying the transforming and clicking \texttt{undo}, the step will say \texttt{Text transform on 0 cells}, meaning that nothing was transformed.\\
+\textbf{Results:} Was able to apply number transforms on columns.
+\subsection{Task 2: Numeric facet}
+\textbf{Objective:} To apply a numeric facet with multiple values\\
+\textbf{Action:}
+\begin{enumerate}
+    \item Transform a numeric column to numbers
+    \item Change some of the values to characters
+    \item Add a numeric facet
+    \item Experiment with the various checkboxes in the facet
+\end{enumerate}
+\textbf{Errors: }No errors were encountered\\
+\textbf{Results:} Was able to successfully create and manipulate a numeric facet.
 \end{document}
