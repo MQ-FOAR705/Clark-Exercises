@@ -1192,7 +1192,7 @@ Therefore, \texttt{-mtime} needs a \texttt{-1}.\\
     \url{http://openrefine.org/}
     \item Unzip the downloaded file
     \item Double click on \texttt{openrefine.exe}
-    \item If nothing opens automatically, open web browser and navigate to \texttt{localhost:3333}
+    \item If nothing opens automatically, open web browser and navigate to\\ \texttt{localhost:3333}
 \end{enumerate}
 \textbf{Errors:} No errors were encountered.\\
 \textbf{Analysis:} Was able to successfully open and load OpenRefine. As a note, if any unknown issues occur while loading OpenRefine, try launching \texttt{refine.bat} before retrying.\\
@@ -1247,7 +1247,7 @@ Therefore, \texttt{-mtime} needs a \texttt{-1}.\\
     \item \texttt{value.replace("]", "")}
     \item \texttt{value.replace(" ", "")}
 \end{itemize}
-\textbf{Results:} Successfully used the \texttt{value.replace} function to remove unnecessary formatting\\
+\textbf{Results:} Successfully used the \texttt{value.replace} function to remove unnecessary formatting
 \subsubsection{Exercises 2-4}
 \textbf{Objective:} To clean up the data to anaylse the following questions.\\
 \textbf{Action:}
@@ -1261,7 +1261,8 @@ Therefore, \texttt{-mtime} needs a \texttt{-1}.\\
     \item The most commonly owned item are mobile phones and radios. The least owned item are cars and computers.
     \item The most likely month for farmers to lack food is November.
 \end{enumerate}
-\textbf{Results:} Successfully cleaned up the columns necessary to answer the required questions.\\
+\textbf{Results:} Successfully cleaned up the columns necessary to answer the required questions.
+%%%%%%%%%% New Title %%%%%%%%%%
 \section{OpenRefine Exercises 2: Filtering and Sorting}
 \subsection{Task 1: Filtering}
 \textbf{Objective:} Using filters, answer the following questions:\\
@@ -1347,22 +1348,344 @@ Therefore, \texttt{-mtime} needs a \texttt{-1}.\\
 \end{enumerate}
 \textbf{Errors:} Because tidyverse is dependent on other packages that was installed, R threw out an error, however it automatically downloaded and installed the required packages before resuming the installation of \texttt{tidyverse}.
 \textbf{Results:} \texttt{tidyverse} was installed.
+
+%%%%%%%%%% New Entry %%%%%%%%%%
 \section{R: 1 - Introduction to R}
 \subsection{Exercise 1: Creating objects in R}
-\textbf{Objective:} Identify the passing of variables
+\textbf{Objective:} Identify the passing of variables\\
 \textbf{Action:} Determine the end value of \texttt{area\_acres}:\\
-\texttt{area\_hectares <- 2.5}\\
-\texttt{2.47 * area\_hectares}\\
-\texttt{area\_acres <- 2.47 * area\_hectares}\\
-\texttt{area\_hectares <- 50}\\
-\textbf{Errors:} No errors were encountered
-\textbf{Analysis:} Tracing the code, \texttt{area\_acres}'s value is 6.175 at the end.
+\verb|1      area\_hectares <- 2.5|\\
+\verb|2      2.47 * area\_hectares|\\
+\verb|3      area\_acres <- 2.47 * area\_hectares|\\
+\verb|4      area\_hectares <- 50|\\
+\textbf{Errors:} No errors were encountered\\
+\textbf{Analysis:} Tracing the code, \texttt{area\_acres}'s value is 6.175 at the end.\\
 \textbf{Results:} Successfully traced the given code.
 
+%%%%%%%%%% New Entry %%%%%%%%%%
 \subsection{Exercise 2: Comments}
+\textbf{Objective:} To illustrate how changing variables dont affect previous algorithms
+\textbf{Action:}
+\begin{enumerate}
+    \item Create a variable \texttt{length} and assign it the value 3
+    \item Create a variable \texttt{width} and assign it the value 8
+    \item Create a variable \texttt{area} and assign it as length times width
+    \item Change one of the original variables. Does the value of area change?
+\end{enumerate}
+\textbf{Errors:} No errors encountered.\\
+\textbf{Analysis:} Changing a variable that you previously used in an algorithm does not change the variable used as the output of that algorithm unless you re-run it with the new values entered.\\
+\textbf{Results:} Successfully illustrated the flow of code
 
+%%%%%%%%%% New Entry %%%%%%%%%%
+\subsection{Exercise 3: Functions and their arguments}
+\textbf{Objective:} To determine what \verb|?round| achieves\\
+\textbf{Action:}
+\begin{enumerate}
+    \item Type in \verb|?round| and identify similar functions to \verb|round|
+    \item Determine how to use the \verb|digits| parameter in the round function
+\end{enumerate}
+\textbf{Errors:} No errors were encountered.\\
+\textbf{Analysis:} 
+\begin{enumerate}
+    \item Similar functions to \verb|?round|
+    \begin{itemize}
+        \item \verb|ceiling| takes a single numerical argument \texttt{x} and returns a numeric vector containing the smallest integers not less than the corresponding elements of \texttt{x}
+        \item \verb|verb| takes a single numerical argument \texttt{x} and returns a numeric vector containing the largest integers not greater than the corresponding elements of \texttt{x}
+        \item \verb|trunc| takes a single numerical argument \texttt{x} and returns a numeric vector containing the integers formed by truncating the values in \texttt{x} towards \texttt{0}
+        \item \verb|signif| rounds the values in the first argument to the specified number of significant digits.
+    \end{itemize}
+    \item To use the \verb|digits| parameter, the syntax is:\\
+    \verb|round(x, digits = y|, where \texttt{x} is the number to be rounded, and \texttt{y} is the number of significant figures.
+\end{enumerate}
+\textbf{Results:} Was able to identify the purpose of \verb|?round| and the \verb|digits| function
 
+%%%%%%%%%% New Entry %%%%%%%%%%
+\subsection{Exercise 4: Vectors and data types}
+\textbf{Objective:}
+\begin{enumerate}
+    \item Determine if a vector can contain multiple data types
+    \item Identify the result of \verb|class| on a set of vectors
+    \item Identify the number of of a certain parameter in a series of vector assignments.
+\end{enumerate}
+\textbf{Action:}
+\begin{enumerate}
+    \item Attempt to assign a variable a vector of mixed types and analyse the result
+    \item What happens in the following examples:\\
+    \verb|num_char <- c(1, 2, 3, "a")|\\
+    \verb|num_logical <- c(1, 2, 3, TRUE)|\\
+    \verb|char_logical <- c("a", "b", "c", TRUE)|\\
+    \verb|tricky <- c(1, 2, 3, "4")|
+    \item How many values in \verb|combined_logical| are \verb"TRUE" based on the following code:\\
+    \verb|num_logical <- c(1, 2, 3, TRUE)|\\
+    \verb|char_logical <- c("a", "b", "c", TRUE)|\\
+    \verb|combined_logical <- c(num_logical, char_logical)|
+\end{enumerate}
+\textbf{Errors:} No errors were encountered.\\
+\textbf{Analysis:}
+\begin{enumerate}
+    \item A vector cannot contain multiple data types. Instead, R will pretend all items are of a single type by finding a "common denominator" that does not lose any information
+    \item
+    \begin{itemize}
+        \item \verb|num_char| treats all items as a char
+        \item \verb|num_logical| treats all items as a num
+        \item \verb|char_logical| treats all items as a char
+        \item \verb|tricky| treats all items as a char
+    \end{itemize}
+    My assumption is that numbers can be treated as characters, but not vise versa; booleans when grouped with numbers get switched to a numeric value, and that brackets denote a character, hence the result of 1, 3, and 4.
+    \item
+    \begin{enumerate}
+        \item The first line converts \verb|TRUE| to \verb|1|; data type as numeric
+        \item The second line converts \verb|TRUE| to the char \verb|"TRUE"|; data type as char
+        \item The third line pairs the 2 together. As noted above, numbers get treated as a char, hence all items are converted to char's:\\
+        \verb|"1" "2" "3" "1" "a" "b" "c" "TRUE"|
+    \end{enumerate}
+\end{enumerate}
+\textbf{Results:} Successfully identified how data types are coerced by R. From these exercises, the hierarchy that can be identified is:
+\verb|char ->  num -> booleans|.
 
+%%%%%%%%%% New Entry %%%%%%%%%%
+\subsection{Exercise 5: Missing Data}
+\textbf{Objective:} To manipulate a vector to remove missing data and calculate required data\\
+\textbf{Action:}
+\begin{enumerate}
+    \item Remove the missing data from the following vector:\\
+    \verb|rooms <- c(1, 2, 1, 1, NA, 3, 1, 3, 2, 1, 1, 8, 3, 1, NA, 1)|
+    \item Use \verb|median()| to calculate the median of the \verb|rooms| vector
+    \item Calculate how many households use more than 2 rooms for sleeping
+\end{enumerate}
+\textbf{Errors:} No errors were encountered\\
+\textbf{Analysis:}
+\begin{enumerate}
+    \item \verb|rooms <- na.omit(rooms)|
+    \item \verb|median(rooms)| = 1
+    \item \verb|length(rooms[rooms > 2])|
+\end{enumerate}
+\textbf{Results:} Was able to currently remove missing data and use conditional subsetting to produce the required results.
+
+%%%%%%%%%% New Entry %%%%%%%%%%
+\section{R: 2 - Starting with Data}
+\subsection{Exercise 1: Indexing and subsetting data frames}
+\textbf{Objective:} To use data frame to extract require data.      
+\textbf{Action:}
+\begin{enumerate}
+    \item Create a data frame \verb|interviews_100| containing only the data in row 100 of the data set
+    \item Extract the last row in the data frame and verify with \verb|tail|. Repeat by extracting the last row using \verb|nrow()| and add to a new frame\\ \verb|interviews_last|.|
+    \item Use \verb|nrow()| to extract the row that is in the middle of the data frame and store in \verb|interviews_middle|
+    \item Combine \verb|nrow()| with \verb|-| to produce the same behaviour of \\\verb|head(interviews)|.
+\end{enumerate}
+\textbf{Errors:} Periodically mixed up () with []; [] refers to array indices, while () refers to a function.\\       
+\textbf{Analysis:}
+\begin{enumerate}
+    \item \verb|interviews_100 <- interviews[100, ]|
+    \item \verb|interviews_last <- interviews[nrow(interviews), ]|
+    \item \verb|interviews_middle <- interviews[round(nrow(interviews)/2), ]|
+    \item \verb|interviews_head <- interviews[-(7:nrow(interviews), ]|
+\end{enumerate}
+\textbf{Results:} Correctly identified the correct line of codes to produce the required result.
+
+%%%%%%%%%% New Entry %%%%%%%%%%
+\subsection{Exercise 2: Renaming factors}
+\textbf{Objective:} To rename factor levels and re-arrange a factor barplot\\
+\textbf{Action:}
+\begin{enumerate}
+    \item Rename the levels of the factor to capitalise the first letter of each level
+    \item Rearrange the factor plot such that "Undetermined" is last (after yes)
+\end{enumerate}
+\textbf{Errors:} No errors were encountered\\
+\textbf{Analysis:}
+\begin{enumerate}
+    \item 
+    \verb|levels(memb_assoc)[1] <- "No"|\\
+    \verb|levels(memb_assoc)[2] <- "Undetermined"|\\
+    \verb|levels(memb_assoc)[3] <- "Yes"|
+    \item \verb|memb_assoc <- factor(memb_assoc, |\\
+    \verb|      levels = c("No", "Yes", "Undetermined"))|
+\end{enumerate}
+\textbf{Results:} Was able to rename and rearrange levels within a factor.
+
+%%%%%%%%%% New Entry %%%%%%%%%%
+\section{R: 3 - Introducing dplyr and tidyr}
+
+\subsection{Exercise 1: Pipes}
+\textbf{Objective:} Develop a dplyr algorithm using pipes\\
+\textbf{Action:} Using pipes, subset the \texttt{interviews} data to include interviews where respondents were members of an irrigation association (\texttt(memb\_assoc)) and retain only the columns \texttt{affect\_conflicts}, \texttt{liv\_count}, and \texttt{no\_meals}. \\
+\textbf{Errors:} No errors were encountered\\
+\textbf{Analysis:}\\
+    \verb|  interviews %>%|\\
+    \verb|      filter(memb_assoc == "yes") %>%|\\
+    \verb|          select(affect_conflicts, liv_count, no_meals)|\\
+\textbf{Results:} Successfully piped together dplyr functions
+
+\subsection{Exercise 2: Mutate}
+\textbf{Objective:} To use pipes, select, filter, and mutate to produce a new data frame\\
+\textbf{Action:} Create a new data frame from the \texttt{interviews} data that meets the following criteria: contains only the \texttt{village} column and a new column called \texttt{total\_meals} containing a value that is equal to the total number of meals served in the household per day on average (\texttt{no\_membrs} * \texttt{no\_meals}). Only the rows where \texttt{total\_meals} is greater than 20 should be shown in the final data frame.\\
+\textbf{Errors:} No errors were encountered\\
+\textbf{Analysis:}
+\newpage
+    \verb|  interviews_total_meals <- interviews %>%|\\
+    \verb|          mutate(total_meals = no_membrs * no_meals) %>%|\\
+    \verb|          filter(total_meals > 20) %>%|\\
+    \verb|          select(village, total_meals)|\\
+\textbf{Results:} Successfully produced a piped algorithm using dplyr functions
+
+\subsection{Exercise 3: Split-apply-combine data analysis}
+\textbf{Objective:} To use dplyr's functions to produce the required data.\\
+\textbf{Action:}
+\begin{enumerate}
+    \item How many households have an average of 2 meals per day? 3 meals per day? Any other numbers of meals per day?
+    \item Use \texttt{group\_by()} and \texttt{summarize} to find the mean, min, and max number of household members for each village. Add the number of observations
+    \item What was the largest household interviewed in each month?
+\end{enumerate}
+\textbf{Errors:} No errors were encountered\\
+\textbf{Analysis:}
+\begin{enumerate}
+    \item 52 households had 2 meals/day; 79 households had 3 meals/day. No other number of meals/day was recorded.\\
+    \verb|interviews %>%|\\
+    \verb|      count(no_meals)|
+    \newpage
+    \item:
+    \verb|interviews %>%|\\
+    \verb|      group_by(village) %>%|\\
+    \verb|      summarize(|\\
+    \verb|          mean_no_membrs = mean(no_membrs),|\\
+    \verb|          min_no_membrs = min(no_membrs),|\\
+    \verb|          max_no_membrs = max(no_membrs),|\\
+    \verb|          n = n()|\\
+    \verb|      )|
+    \begin{verbatim}
+# A tibble: 3 x 5
+  village  mean_no_membrs min_no_membrs max_no_membrs     n
+  <chr>             <dbl>         <dbl>         <dbl> <int>
+1 Chirodzo           7.08             2            12    39
+2 God                6.86             3            15    43
+3 Ruaca              7.57             2            19    49
+    \end{verbatim}
+    \item The largest household interviewed in each month was Nov 2016 with 19.
+    \begin{verbatim}
+    interviews %>%
+        mutate(month = month(interview_date),
+            day = day(interview_date),
+            year = year(interview_date)) %>%
+                group_by(year, month) %>%
+                summarize(max_no_membrs = max(no_membrs))
+    \end{verbatim}
+    \newpage
+    \begin{verbatim}
+        # A tibble: 5 x 3
+        # Groups:   year [2]
+           year month max_no_membrs
+          <dbl> <dbl>         <dbl>
+        1  2016    11            19
+        2  2016    12            12
+        3  2017     4            17
+        4  2017     5            15
+        5  2017     6            15
+    \end{verbatim}
+\end{enumerate}
+\textbf{Results:} Was able to successfully use dplyr to generative analysis based on the given questions.
+
+\subsection{Exercise 4: Applying spread() to clean our data}
+\textbf{Objective:} To use spread() in conjuction with dplyr functions to transform and clean our data set based on the given parameters.\\
+\textbf{Action:}
+\begin{enumerate}
+    \item Create a new data frame (\verb|interviews_months_lack_food|) that has one column for each month and records T|F per respondent based on if they lacked food in that month
+    \item How many months (on average) were respondents without food if they did belong to an irrigation association? What about if they didnt?
+\end{enumerate}
+\textbf{Errors:} Minor syntax errors only.\\
+\textbf{Analysis:}
+\begin{enumerate}
+    \item 
+    \begin{verbatim}
+    interviews_months_lack_food <- interviews %>%
+        separate_rows(months_lack_food, sep=";") %>%
+        mutate(months_lack_food_logical  = TRUE) %>%
+        spread(key = months_lack_food, 
+        value = months_lack_food_logical, fill = FALSE)
+    \end{verbatim}
+    \item On average, respondents without food and irrigation association lacked food for 2.31 months, while those with an irrigation association lacked food 2.64 months.
+    \begin{verbatim}
+    interviews_months_lack_food %>%
+        mutate(number_months =
+            rowSums(select(., Apr:Sept))) %>%
+        group_by(memb_assoc) %>%
+        summarize(mean_months = mean(number_months))
+    \end{verbatim}
+\end{enumerate}
+\textbf{Results:} Was able to use \verb|spread| to produce a new, clean table for easy analysis using dplyr functions.
+
+%%%%%%%%%% New Entry %%%%%%%%%%
+\section{R: 4 - Data Visualisation with ggplot2}
+
+\subsection{Exercise 1: Building plots iteratively}
+\textbf{Objective:} To create a scatter plot from a data frame\\
+\textbf{Action:} Build a scatter plot of \verb|rooms| by \verb|village| with the \\\verb|respondent_wall_type| showing different colours. Is this a good way to show this type of data?\\
+\textbf{Errors:} No errors were encountered\\
+\textbf{Analysis:} This form of plotting makes it difficult to find correlations \& distinguish between wall types.
+\begin{verbatim}
+    ggplot(data = interviews_plotting, 
+        aes(x = village, y = rooms)) +
+        geom_jitter(aes(color = respondent_wall_type))
+\end{verbatim}
+\textbf{Results:} Successfully created a scatter plot from a data frame
+
+\subsection{Exercise 2: Boxplot}
+\textbf{Objective:} To create and manipulate boxplots\\
+\textbf{Action:}
+\begin{enumerate}
+    \item Replace the boxplot with a violin plot (\verb|geom_violin()|)
+    \item Create a boxplot for \verb|liv_count| by \verb|respondent_wall_type|, overlaying a jitter layer to show the actual measurements
+    \item Colour the data points based on whether the respondent is a member of an irrigation association (\verb|memb_assoc|)
+\end{enumerate}
+\textbf{Errors:} No errors were encountered\\
+\textbf{Analysis:}
+\begin{enumerate}
+    \item \begin{verbatim}
+    ggplot(data = interviews_plotting, aes(x = 
+        respondent_wall_type, y = rooms)) +
+        geom_violin(alpha = 0) + 
+        geom_jitter(alpha = 0.5, color = "tomato")
+    \end{verbatim}
+    \item \begin{verbatim}
+    ggplot(data = interviews_plotting, 
+        aes(x = respondent_wall_type, y = liv_count)) + 
+            geom_boxplot(alpha = 0) + 
+                geom_jitter(alpha = 0.5)
+    \end{verbatim}
+    \item \begin{verbatim}
+ggplot(data = interviews_plotting, 
+    aes(x = respondent_wall_type, y = liv_count)) + 
+        geom_boxplot(alpha = 0) + 
+        geom_jitter(aes(alpha = 0.5, color = memb_assoc))
+    \end{verbatim}
+\end{enumerate}
+\textbf{Results:} Successfully creates a box plot, violin plot, and adjusted colours of different answers.
+
+%%%%%%%%%% New Title %%%%%%%%%%
+\subsection{Exercise 3: Barplots}
+\textbf{Objective:} To create a bar plot\\
+\textbf{Action:} Create a bar plot showing the proportions of respondents in each village who are/are not part of an irrigation association (\verb|memb_assoc|). Remove NA's from the calculations and plot. What village had the lowest proportion of respondents in an irrigation association?
+\textbf{Errors:} No errors were encountered\\
+\textbf{Analysis:} The village with the lowest proportion of respondents in an irrigation association is Ruaca.
+\begin{verbatim}
+    percent_memb_assoc <- interviews_plotting %>%
+        filter(!is.na(memb_assoc)) %>%
+        count(village, memb_assoc) %>%
+        group_by(village) %>%
+        mutate(percent = n / sum(n)) %>%
+        ungroup()
+
+    ggplot(percent_memb_assoc, aes(x = village, y = percent, 
+        fill = memb_assoc)) + geom_bar(stat = "identity", 
+        position = "dodge")
+\end{verbatim}
+\textbf{Results:} Successfully build a bar plot
+
+\subsection{Exercise 4: ggplot2 Themes}
+\textbf{Objective:} To experiment with ggplot themes\\
+\textbf{Action:} Recreate a plot with different themes. Choose your favourite.\\
+\textbf{Errors:} No errors were encountered\\
+\textbf{Analysis:} My favourite aesthetically is \verb|theme_void()|, however it can make graphs harder to read, so my second choice would be \verb|theme_dark()|.\\
+\textbf{Results:} Successfully modified a plot to determine my favourite theme
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
@@ -1371,23 +1694,167 @@ Therefore, \texttt{-mtime} needs a \texttt{-1}.\\
 \textbf{Action:}\\
 \textbf{Terminology}
 \begin{itemize}
-    \item \textit{Object} ~ \textit{Variable}
-    \item Print: simply type the object name by itself, or in parenthesis
+    \item \textbf{Object} \verb|==| \textbf{Variable}
+    \item \textbf{Print}: simply type the object name by itself, or in parenthesis
+    \item \textbf{Vector}: a series of values which can be assigned to a single variable.
+    \item \textbf{Atomic vector}: a vector what consists of the following basic data types: \texttt{character}, \texttt{numeric} (aka double), \texttt{logical} (aka boolean), \texttt{integer},\\ \texttt{complex} (aka imaginary numbers), \texttt{raw} (aka bitstreams),
+    \item \textbf{Data frame}: data structure that represents imported data in the form of a table, where columns are vectors of same length
+    \item \textbf{Tiddle}: an extension of data frames from \textit{tidyverse}; is created when using \verb|read_csv| and stores the data in an object of class \verb|tbl_df|; \verb|tbl|; \verb|data.frame|. Will abbreviate column names based on data type.
+    \item \textbf{Factor}: Special data class for categorical data which store data as integers associated with labels, although look/act as a character vector. Can be ordered/unordered. Assigns parameters by levels based on alphabetical order per unique element.
+    \item \textbf{lubridate}: a package part of \textit{tidyverse}. When loaded, is used to manipulate date formats.
+    \item \textbf{dplyr}: a package part of \textit{tidyverse}; eases tabular data manipulation. Commonly used with \verb|tidyr|. 
+    \item \textbf{Spreading}: Essentially rotates the table by mapping columns to rows and vice versa, such that a \textit{long} table turns into a \textit{wide} table
+    \item \textbf{Grouping}: The opposite of spreading; transforming a wide table into a long table
+    \item \textbf{ggplot2}: A plotting package from the \textit{tidyverse} package; creates complex plots from data frames. Cheatsheet can be found \hyperlink{https://rstudio.com/wp-content/uploads/2016/11/ggplot2-cheatsheet-2.1.pdf}{here}.
 \end{itemize}
 \textbf{Syntax:}
+\begin{center}
+    \textbf{General}
+\end{center}
 \begin{itemize}
     \item \verb|<-|: Assignment Operator (\verb|x=3 ~ x<-3|)
     \item \verb|#|: Comment (CTRL + SHFT + C)
+    \begin{center}
+        \textbf{Vectors}
+    \end{center}
+    \item \verb|c()|: add a series of values as a vector to a variable
+    \item \verb|length()|: display the number of elements in a vector
+    \item \verb|class()|: display the data type on a variable.
+    \item \verb|str|: outline an overview of the structure of a variable and its elements
+    \item \verb|typeof()|: display the data type of a given vector
+    \item \verb|<vector>[vector index]|: return the data contained by that index \\(starting at 1). This vector can then be used to create a new object with the same elements in any number
+    \begin{itemize}
+        \item \verb|<vector>[c(...)]|: return the data found as the specified indexes
+        \item \verb|<vector>[c(Boolean)]|: TRUE values return the element at that index, false does not. Usually used as the output of another function/logical test
+    \end{itemize}
+    \begin{center}
+        \textbf{Logical Operators}
+    \end{center}
+    \item \verb|&|: Logical AND
+    \item \texttt{|}: Logical OR
+    \item \verb|<; <=; >=; >|: Less than; Less than or equal to; Greater than or equal to; Greater than.
+    \item \verb|==|: Numerical equality
+    \begin{center}
+       \textbf{Missing Data} 
+    \end{center}
+    \item \verb|NA|: Missing data.
+    \begin{itemize}
+        \item \verb|na.rm = TRUE|: Ignore missing data in calculations
+        \item \verb|is.na()|: Return the NA values
+        \item \verb|na.omit()|: Extract NA data and return a new vector without missing data.
+        \item \verb|complete.cases()|: Extract non-NA variables and return a new vector without missing data.
+    \end{itemize}
+    \begin{center}
+        \textbf{CSV's and Tiddle}
+    \end{center}
+    \item \verb|read_csv(path), na = "NA"|: apart of the \textbf{tidyverse} package, imports a csv file into R; designate what the dataset uses to designate missing data. Assigning to a variable creates a data frame. Assumed comma delineated.
+    \begin{itemize}
+        \item \verb|<AssignedDataSet>|: display content of the data frame
+    \end{itemize}
+    \item \verb|tbl_df| functions:
+    \begin{itemize}
+        \item \verb|dim(dataSet)|: returns a vector with the number of rows in the first element, and the number of columns as the second element (the \textbf{dim}ensions of the obect)
+        \item \verb|nrow(dataSet)|: returns the number of rows
+        \item \verb|ncol(dataSet)|: returns the number of columns
+        \item \verb|head(dataSet)|: display the first 6 rows
+        \item \verb|tail(dataSet)|: display the last 6 rows
+        \item \verb|names(dataSet)|: return the column names
+        \item \verb|str(dataSet)|: return structure of object and information about its class; length; content of each column
+        \item \verb|summary(dataSet)|: sumary statistics for each column
+    \end{itemize}
+    \item \verb|write_csv(documentName, path = "path")|: Write to a new csv
+    \begin{center}
+        \textbf{Manipulating dataframes}
+    \end{center}
+    \item \verb|dataSet[a, b]|: return data at index(a,b), starting at (1,1), as a vector
+    \begin{itemize}
+        \item \verb|dataset[[a]]|: return first column as a vector
+        \item \verb|dataSet[a:x, b]|: return x elements in a column starting from (a,b), as a vector
+        \begin{itemize}
+            \item produces a vector based on increasing order if \verb|a > x|; decreasing order if \verb|x < a|.
+        \end{itemize}
+        \item \verb|dataSet[a, ]|: return row a as a data frame, as a vector
+        \item \verb|dataSet[, -b|: return the whole data frame, excluding column b
+        \item \verb|dataset[subset]|: return subset as a data frame
+    \end{itemize}
+    \begin{center}
+        \textbf{Factors}   
+    \end{center}
+    \item \verb|... <- factor(c(data, here))|: Creates a factor, assigning each element to a level per unique element, starting from 1 and growing i++; assignment based on alphabetical order, not element ordering.
+        \begin{itemize}
+            \item \verb|createdFactor <- factor(createdFactor, |\\
+            \verb|      levels = c("top level" "next level"...))|: \\
+            Change the visual ordering of the elements within factor.
+        \end{itemize}
+    \item \verb|levels(createdFactor)|: displays elements in order of levels ascending
+    \begin{itemize}
+        \item \verb|nlevels(createdFactor)|: returns number of levels
+        \item \verb|levels(createdFactor)[level] <- newName |: change the name of a particular level and its elements in that level.
+    \end{itemize}
+    \item \verb|as.character(createdFactor)|: converts factor to a character vector
+    \item \verb|as.numeric(levels(createdFactor))[createdFactor]|: convert a factor to a numeric vector. \verb|as.numeric()| by itself returns the level of each element.
+    \item \verb|plot(createdFactor)|: produces a bar plot graph based on the given factor. NA's are not used in the graph unless it's name is changed (Eg: NA to "undetermined")
+    \begin{center}
+      \textbf{dplyr \& tidyr}  
+    \end{center}
+    \item \verb|select(dataFrame, columnNameA...)|: subset columns 
+    \item \verb|filter(dataFrame, column == "specificData")|: subset rows on conditions 
+    \item \verb|mutate(newColumn = columnA +\-\*\/ columnB)|: create new columns by using information from other columns 
+    \item \verb|group_by()| and \verb|summarize()|: create summary statistics on grouped data
+    \begin{itemize}
+        \item \verb|group_by(categoricalColumn,...)%>%|\\
+        \verb|    summarize(newColumn = someFunction(analysisColumn)|: \\
+        \textit(group\_by) take the column that contains the categorical variables to be used to calculate the summary statistics. \textit{summarize} collapses each group into a single-row summary of that group.
+    \end{itemize}
+    \item \verb|arrange()|: sort results either \texttt{desc()} or \texttt{asc()} 
+    \item \verb|count(column, sort = T)|: count discrete values, can use the sort argument to get results in decreasing order
+    \item \verb|%>%|: Pipe; stands for 'and then'; similar to \texttt{|} in the unix shell.
+    \begin{center}   
+    \textbf{Spreading and Gathering}
+    \end{center}
+    \item \verb|spread()|: takes 3 principles;
+    \begin{itemize}
+        \item (1) The data
+        \item (2) The \textit{key} column variable whose values will become the new column names
+        \item (3) The \textit{value} column variable whose values will fill the new column variables\\
+        \verb|dataFrame %>%|\\ 
+        \verb|   spread(key = columnA, value = columnB, fill = value)|
+        \item The \verb|fill| argument will fill the rest of the new columns with the stated value.
+    \end{itemize}
+    \item \verb|gather()|: takes 4 principles;
+    \begin{itemize}
+        \item (1) the data
+        \item (2) The \textit{key} column variable we wish to create from column names
+        \item (3) The \textit{value} column variable we wish to create and fill with values associated with the key
+        \item (4) the names of the columns we use to fill the key variable (or to drop)
+        \begin{itemize}
+            \item \verb|dataFrame %>%|\\
+            \verb|  gather(key=columnA, value=columnB, startCol:endCol|
+        \end{itemize}
+        \begin{itemize}
+            \item The forth argument takes 2 arguments; the values from the startCol to the endCol are used to fill the new value column based on their order in the dataFrame.
+        \end{itemize}
+    \end{itemize}
+    \begin{center}
+        \textbf{ggplot2}  
+    \end{center}
+    \item \verb|ggplot2(data = <DATA>, mapping = aes(<MAPPINGS>)) + |\\
+    \verb|<GEOM_FUNCTION>()|: basic \verb|ggplot2| template for different types of plots
+    \begin{itemize}
+        \item \verb|data = dataFrame|: Used to bind a specific data frame to a ggplot
+        \item \verb|aes(x = columnA, y = columnB)|: defines a mapping (using the aesthetic \verb|aes| function). Can be expanded to adjust presentation of graph
+        \item \verb|GEOM_FUNCTION|: graphical representation type:
+        \begin{itemize}
+            \item \verb|geom_point()|: scatter/dot plots etc.
+            \item \verb|geom_boxplot()|: boxplots
+            \item \verb|geom_line()|: trend lines/time series etc.
+        \end{itemize}
+        \item \verb|labs(title = "", x = "", y = "")|: creates labels for the graph, including a title, x-axis, and y-axis.
+        \item \verb|facet_wrap(~ column)|: produces multiple plots as facets based on the argument given
+        \item \verb|theme_bw()| and \verb|theme(arguments)|: Adjusts the colour set used. Theme sets can be found by R's autoscriptor here:\\
+        \url{https://ggplot2.tidyverse.org/reference/ggtheme.html}
+    \end{itemize}
 \end{itemize}
-
-
-
-
-
-
-
-
-
 \end{document}
 
 
